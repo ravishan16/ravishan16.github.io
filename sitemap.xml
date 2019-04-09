@@ -16,5 +16,8 @@
     <loc>https://ravishankars.com/tags/</loc>
     <priority>0</priority>
   </url>
-  
+    <url>
+    <loc>https://ravishankars.com/images/</loc>
+    <priority>0</priority>
+  </url>
 </urlset>
