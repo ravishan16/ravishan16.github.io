@@ -15,4 +15,16 @@
     <loc>https://ravishankars.com/events/</loc>
     <priority>1</priority>
   </url>
+  <url>
+    <loc>https://ravishankars.com/ExpressApi/</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ravishankars.com/CountByAlexa/</loc>
+    <priority>0.5</priority>
+  </url>
+   <url>
+    <loc>https://ravishankars.com/FlaskApp/</loc>
+    <priority>0.5</priority>
+  </url>
 </urlset>
