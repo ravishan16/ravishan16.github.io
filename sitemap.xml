@@ -1,18 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ravishankars.com/</loc>
-    <priority>1</priority>
+    <lastmod>2019-10-14</lastmod>
+    <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_profile.JPG</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam Profile</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://ravishankars.com/tags/</loc>
-    <priority>0</priority>
-  </url>
-    <url>
-    <loc>https://ravishankars.com/events/</loc>
-    <priority>1</priority>
+    <loc>hhttps://ravishankars.com/events/</loc>
+    <lastmod>2019-10-14</lastmod>
+    <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_uncc_1.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
+    </image:image>
+      <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_antp_1.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam Tamil Palli</image:caption>
+    </image:image>
+      <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_ingersoll_1.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam ingersoll speech</image:caption>
+    </image:image>
+      <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_columbia_1.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam Columbia university</image:caption>
+    </image:image>
+      <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_jupytercon2017.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam Jupyter Conference</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://ravishankars.com/ExpressApi/</loc>
