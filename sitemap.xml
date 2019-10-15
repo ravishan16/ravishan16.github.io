@@ -10,10 +10,22 @@
     </image:image>
   </url>
   <url>
-    <loc>hhttps://ravishankars.com/events/</loc>
+    <loc>https://ravishankars.com/events/</loc>
     <lastmod>2019-10-14</lastmod>
     <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_unc_1.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_unc_2.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_uncc_1.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_uncc_2.jpg</image:loc>
       <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
     </image:image>
       <image:image>
