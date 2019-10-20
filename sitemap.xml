@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ravishankars.com/</loc>
-    <lastmod>2019-10-17</lastmod>
+    <lastmod>2019-10-19</lastmod>
     <image:image>
       <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_profile.JPG</image:loc>
       <image:caption>Ravishankar Sivasubramaniam Profile</image:caption>
@@ -11,13 +11,21 @@
   </url>
   <url>
     <loc>https://ravishankars.com/events/</loc>
-    <lastmod>2019-10-14</lastmod>
+    <lastmod>2019-10-19</lastmod>
     <image:image>
       <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_unc_1.jpg</image:loc>
       <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_unc_2.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_unc_3.jpg</image:loc>
+      <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ravishankars.com/images/ravishankar_sivasubramaniam_unc_4.jpg</image:loc>
       <image:caption>Ravishankar Sivasubramaniam UNCC</image:caption>
     </image:image>
     <image:image>
