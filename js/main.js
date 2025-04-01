@@ -6,20 +6,30 @@
 async function loadProjects() {
     const projectsList = document.getElementById('projects-list');
     const loadingIndicator = document.getElementById('projects-loading');
-    if (!projectsList) return;
+    if (!projectsList) return; // Exit if container not on page
+
     try {
-        const response = await fetch('data/projects.json');
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        const projects = await response.json();
-        if (loadingIndicator) loadingIndicator.remove();
-        if (!Array.isArray(projects) || projects.length === 0) {
-            projectsList.innerHTML = '<p class="text-center text-secondary md:col-span-2">No projects to display yet.</p>'; return;
+        const response = await fetch('data/projects.json'); // Path relative to HTML
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status} ${response.statusText}`);
         }
-        projectsList.innerHTML = '';
+        const projects = await response.json();
+
+        if (loadingIndicator) loadingIndicator.remove();
+
+        if (!Array.isArray(projects) || projects.length === 0) {
+            projectsList.innerHTML = '<p class="text-center text-secondary md:col-span-2">No projects to display yet.</p>';
+            return;
+        }
+
+        projectsList.innerHTML = ''; // Clear before adding
+
         projects.forEach(project => {
             const projectCard = document.createElement('div');
-            projectCard.className = 'content-card p-6 rounded-lg shadow flex flex-col justify-between border'; // Added border
+            // Added border class from style.css
+            projectCard.className = 'content-card p-6 rounded-lg shadow flex flex-col justify-between border border-light';
 
+            // Safely access properties
             const title = project.title || 'Untitled Project';
             const description = project.description || 'No description available.';
             const dateMMYYYY = project.dateMMYYYY;
@@ -29,24 +39,29 @@ async function loadProjects() {
             const liveUrl = project.liveUrl;
             const readMoreUrl = project.readMoreUrl;
 
+            // --- Create Card Content ---
             let tagsHTML = tags.length > 0 ? `<div class="mt-4 flex flex-wrap gap-2">${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : '';
             let imageHTML = '';
              if (imageUrl) {
-                const placeholderUrl = `https://placehold.co/600x400/F5F5F5/555555?text=${encodeURIComponent(title)}`;
-                imageHTML = `<img src="${imageUrl}" alt="${title}" class="mb-4 rounded aspect-video object-cover w-full" onerror="this.onerror=null; this.src='${placeholderUrl}';">`;
+                const placeholderUrl = `https://placehold.co/600x400/F0F0F0/555555?text=${encodeURIComponent(title)}`; // Updated placeholder colors
+                imageHTML = `<img src="${imageUrl}" alt="${title}" class="mb-4 rounded aspect-video object-cover w-full" loading="lazy" onerror="this.onerror=null; this.src='${placeholderUrl}';">`; // Added loading="lazy"
              }
-             const dateHTML = dateMMYYYY ? `<p class="text-xs text-secondary mb-2"><i data-lucide="calendar" class="inline-block h-3 w-3 mr-1 align-middle"></i>${dateMMYYYY}</p>` : '';
+             const dateHTML = dateMMYYYY ? `<p class="text-xs text-secondary mb-2 flex items-center"><i data-lucide="calendar" class="inline-block h-3 w-3 mr-1"></i>${dateMMYYYY}</p>` : '';
             const readMoreLinkHTML = readMoreUrl ? `<a href="${readMoreUrl}" target="_blank" rel="noopener noreferrer" class="text-sm text-accent hover:text-accent-darker font-medium flex items-center gap-1"><i data-lucide="book-open" class="inline-block h-4 w-4"></i> Read More</a>` : '';
 
             const contentPart = `<div>${imageHTML}<h3 class="text-xl font-semibold mb-1 text-primary">${title}</h3>${dateHTML}<p class="text-sm text-secondary mb-4">${description}</p>${tagsHTML}</div>`;
             const linksPart = `<div class="flex flex-wrap gap-4 mt-4 pt-4 border-t border-light">${githubUrl ? `<a href="${githubUrl}" target="_blank" rel="noopener noreferrer" class="text-sm text-accent hover:text-accent-darker font-medium flex items-center gap-1"><i data-lucide="github" class="inline-block h-4 w-4"></i> GitHub</a>` : ''}${liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener noreferrer" class="text-sm text-accent hover:text-accent-darker font-medium flex items-center gap-1"><i data-lucide="external-link" class="inline-block h-4 w-4"></i> Live Demo</a>` : ''}${readMoreLinkHTML}</div>`;
             projectCard.innerHTML = contentPart + linksPart;
+            // --- End Card Content ---
+
             projectsList.appendChild(projectCard);
         });
+        // Initialize icons for the newly added elements
         if (typeof lucide !== 'undefined') lucide.createIcons();
+
     } catch (error) {
-        console.error('Error loading projects:', error);
-        const errorMsg = '<p class="text-center text-red-500 md:col-span-2">Failed to load projects.</p>'; // Use red accent for error
+        console.error('Error loading or parsing projects.json:', error); // More specific console error
+        const errorMsg = `<p class="text-center text-accent md:col-span-2">Failed to load projects. Please check console for details.</p>`; // Use accent color for error
         if (loadingIndicator) loadingIndicator.outerHTML = errorMsg;
         else if (projectsList) projectsList.innerHTML = errorMsg;
     }
@@ -58,19 +73,26 @@ async function loadProjects() {
 async function loadSpeaking() {
     const speakingList = document.getElementById('speaking-list');
     const loadingIndicator = document.getElementById('speaking-loading');
-    if (!speakingList) return;
+    if (!speakingList) return; // Exit if container not on page
+
     try {
-        const response = await fetch('data/speaking.json');
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        const response = await fetch('data/speaking.json'); // Ensure path is correct
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status} ${response.statusText}`);
+        }
         const engagements = await response.json();
+
         if (loadingIndicator) loadingIndicator.remove();
+
         if (!Array.isArray(engagements) || engagements.length === 0) {
             speakingList.innerHTML = '<p class="text-center text-secondary">No speaking engagements to display yet.</p>'; return;
         }
-        speakingList.innerHTML = '';
+
+        speakingList.innerHTML = ''; // Clear previous content
+
         engagements.forEach(eng => {
             const section = document.createElement('section');
-            section.className = 'content-card p-6 rounded-lg shadow overflow-hidden border'; // Added border
+            section.className = 'content-card p-6 rounded-lg shadow overflow-hidden border border-light'; // Added border
 
             const contentWrapper = document.createElement('div');
             const title = eng.title || 'Untitled Engagement';
@@ -84,11 +106,13 @@ async function loadSpeaking() {
             const videoUrl = eng.videoUrl;
             const slidesUrl = eng.slidesUrl;
 
+            // --- Create Section Content ---
             if (imageUrl) {
                 const img = document.createElement('img');
-                const placeholderUrl = `https://placehold.co/400x250/F5F5F5/555555?text=${encodeURIComponent(title)}`;
+                const placeholderUrl = `https://placehold.co/400x250/F0F0F0/555555?text=${encodeURIComponent(title)}`; // Updated placeholder colors
                 img.src = imageUrl; img.alt = title;
                 img.className = "mb-4 rounded aspect-video object-cover w-full sm:w-1/3 sm:max-w-[250px] sm:float-right sm:ml-6 sm:mb-2";
+                img.loading = "lazy"; // Lazy load images
                 img.onerror = () => { img.src = placeholderUrl; };
                 contentWrapper.appendChild(img);
             }
@@ -109,7 +133,9 @@ async function loadSpeaking() {
             contentWrapper.appendChild(metaP);
 
             const descDiv = document.createElement('div');
-            descDiv.className = 'text-secondary mb-4 clear-both'; descDiv.innerHTML = description; // Use innerHTML if desc might contain simple tags
+            // Use textContent for safety unless description is guaranteed safe HTML
+            descDiv.textContent = description;
+            descDiv.className = 'text-secondary mb-4 clear-both prose prose-sm max-w-none'; // Add basic prose styling
             contentWrapper.appendChild(descDiv);
 
             const linksDiv = document.createElement('div');
@@ -125,22 +151,31 @@ async function loadSpeaking() {
             const videoDiv = document.createElement('div'); videoDiv.className = 'my-4 clear-both';
             if (videoUrl) {
                  let embedUrl = '';
-                 try {
-                     const urlObj = new URL(videoUrl); // Use URL constructor for parsing
-                     if ((urlObj.hostname.includes('https://youtu.be/xJdTxfYYMRQ7') || urlObj.hostname.includes('https://youtu.be/xJdTxfYYMRQ8')) && urlObj.searchParams.get('v')) { embedUrl = `https://www.youtube.com/embed/${urlObj.searchParams.get('v')}`; }
-                     else if (urlObj.hostname.includes('youtube.com/embed/')) { embedUrl = videoUrl; } // Assumes it's already an embed link
-                     else if (urlObj.hostname.includes('youtu.be/')) { const videoId = urlObj.pathname.substring(1); if(videoId) embedUrl = `https://www.youtube.com/embed/${videoId}`; }
+                 try { // Attempt to parse and create YouTube embed URL
+                     const urlObj = new URL(videoUrl);
+                     let videoId = null;
+                     if ((urlObj.hostname.includes('https://youtu.be/xJdTxfYYMRQ9') || urlObj.hostname.includes('youtube.com/embed0')) && urlObj.searchParams.get('v')) { videoId = urlObj.searchParams.get('v'); }
+                     else if (urlObj.hostname.includes('youtu.be/')) { videoId = urlObj.pathname.substring(1); }
+                     else if (urlObj.hostname.includes('youtube.com/embed/')) { embedUrl = videoUrl; } // Assume it's already embed
+
+                     if(videoId) embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
                  } catch(e) { console.warn("Could not parse video URL:", videoUrl); }
 
-                if (embedUrl) {
+                if (embedUrl) { // If we got a valid embed URL
                      videoDiv.className = 'video-embed my-4 clear-both'; videoDiv.style.cssText = 'position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;';
-                     const iframe = document.createElement('iframe'); iframe.src = embedUrl; iframe.title = `YouTube video player for ${title}`; iframe.frameBorder = '0'; iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"; iframe.allowFullscreen = true; iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%;';
+                     const iframe = document.createElement('iframe'); iframe.src = embedUrl; iframe.title = `YouTube video player for ${title}`; iframe.frameBorder = '0';
+                     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                     iframe.allowFullscreen = true; iframe.loading = "lazy"; // Lazy load iframe
+                     iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0.375rem;'; // Added border-radius
                      videoDiv.appendChild(iframe); videoEmbeddedOrPlaceholder = true;
-                 } else if (videoUrl.startsWith('YOUR_YOUTUBE_EMBED_URL_')) {
-                     const placeholderP = document.createElement('p'); placeholderP.className = 'my-4 text-sm text-red-500'; placeholderP.textContent = `[Update video embed URL for: ${title}]`;
+                 } else if (videoUrl.startsWith('YOUR_YOUTUBE_EMBED_URL_')) { // Handle placeholder
+                     const placeholderP = document.createElement('p'); placeholderP.className = 'my-4 text-sm text-red-500 font-semibold';
+                     placeholderP.textContent = `[Please update video embed URL in speaking.json for: ${title}]`;
                      videoDiv.appendChild(placeholderP); videoEmbeddedOrPlaceholder = true;
                  }
             }
+            // Add video link if not embedded/placeholder and URL exists
             if (videoLinkNeeded && !videoEmbeddedOrPlaceholder) {
                  const videoLink = document.createElement('a'); videoLink.href = videoUrl; videoLink.target = '_blank'; videoLink.rel = 'noopener noreferrer';
                  videoLink.className = 'text-sm text-accent hover:text-accent-darker font-medium flex items-center gap-1';
@@ -152,26 +187,30 @@ async function loadSpeaking() {
 
             section.appendChild(contentWrapper); speakingList.appendChild(section);
         });
-        if (typeof lucide !== 'undefined') lucide.createIcons();
+        if (typeof lucide !== 'undefined') lucide.createIcons(); // Re-initialize icons
     } catch (error) {
-        console.error('Error loading speaking engagements:', error);
-        const errorMsg = '<p class="text-center text-red-500">Failed to load speaking engagements.</p>'; // Use red accent
+        console.error('Error loading or parsing speaking.json:', error); // More specific console error
+        const errorMsg = `<p class="text-center text-accent">Failed to load speaking engagements. Please check console for details.</p>`; // Use accent color
         if (loadingIndicator) loadingIndicator.outerHTML = errorMsg;
         else if (speakingList) speakingList.innerHTML = errorMsg;
     }
 }
 
-// --- REMOVED initCarousel function ---
-
 // --- Main Execution ---
 document.addEventListener('DOMContentLoaded', (event) => {
+    // Initialize Lucide Icons for any static icons first
     if (typeof lucide !== 'undefined') {
-        lucide.createIcons(); // Initialize static icons
+        lucide.createIcons();
     } else {
         console.error("Lucide library not loaded.");
     }
 
-    // Load dynamic content if containers exist
-    if (document.getElementById('projects-list')) loadProjects();
-    if (document.getElementById('speaking-list')) loadSpeaking();
+    // Load dynamic content only if the specific container exists on the page
+    if (document.getElementById('projects-list')) {
+        loadProjects();
+    }
+    if (document.getElementById('speaking-list')) {
+        loadSpeaking();
+    }
 });
+

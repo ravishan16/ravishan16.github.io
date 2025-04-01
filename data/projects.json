@@ -6,7 +6,7 @@
     "imageUrl": null,
     "githubUrl": "https://github.com/ravishan16/ExpressApi",
     "liveUrl": null,
-    "readMoreUrl": "https://ravishankars.com/ExpressApi/",
+    "readMoreUrl": null,
     "dateMMYYYY": "04/2019",
     "tags": ["Node.js", "AWS Lambda", "Serverless", "DynamoDB", "API", "JavaScript", "Claudia.js"]
   },
