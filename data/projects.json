@@ -1,0 +1,35 @@
+[
+  {
+    "id": "express-api",
+    "title": "ExpressApi",
+    "description": "AWS Serverless Lambda REST API boilerplate using Node.js, Express, and DynamoDB. Deployed via Claudia.js.",
+    "imageUrl": null,
+    "githubUrl": "https://github.com/ravishan16/ExpressApi",
+    "liveUrl": null,
+    "readMoreUrl": "https://ravishankars.com/ExpressApi/",
+    "dateMMYYYY": "04/2019",
+    "tags": ["Node.js", "AWS Lambda", "Serverless", "DynamoDB", "API", "JavaScript", "Claudia.js"]
+  },
+  {
+    "id": "count-by-alexa",
+    "title": "CountByAlexa",
+    "description": "Interactive Alexa skill using Flask-Ask for learning skip counting. Deploys serverlessly to AWS Lambda/API Gateway via Zappa.",
+    "imageUrl": null,
+    "githubUrl": "https://github.com/ravishan16/CountByAlexa",
+    "liveUrl": null,
+    "readMoreUrl": null,
+    "dateMMYYYY": "04/2017",
+     "tags": ["Python", "Flask", "Alexa Skill", "AWS Lambda", "Serverless", "Zappa"]
+  },
+  {
+    "id": "blueink-remover",
+    "title": "BlueInk Remover",
+    "description": "A utility script likely involving image processing to remove specific color casts (e.g., blue ink from scanned documents). [Note: Add more detailed description if available.]",
+    "imageUrl": null,
+    "githubUrl": "https://github.com/ravishan16/blueink-remover",
+    "liveUrl": null,
+    "readMoreUrl": null,
+    "dateMMYYYY": "01/2020",
+    "tags": ["Python", "Image Processing"]
+  }
+]
