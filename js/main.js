@@ -32,7 +32,7 @@ async function loadProjects() {
             let tagsHTML = tags.length > 0 ? `<div class="mt-4 flex flex-wrap gap-2">${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : '';
             let imageHTML = '';
              if (imageUrl) {
-                const placeholderUrl = `https://placehold.co/600x400/F5F5F5/555555?text=${encodeURIComponent(title)}`; // Updated placeholder colors
+                const placeholderUrl = `https://placehold.co/600x400/F5F5F5/555555?text=${encodeURIComponent(title)}`;
                 imageHTML = `<img src="${imageUrl}" alt="${title}" class="mb-4 rounded aspect-video object-cover w-full" onerror="this.onerror=null; this.src='${placeholderUrl}';">`;
              }
              const dateHTML = dateMMYYYY ? `<p class="text-xs text-secondary mb-2"><i data-lucide="calendar" class="inline-block h-3 w-3 mr-1 align-middle"></i>${dateMMYYYY}</p>` : '';
@@ -46,7 +46,7 @@ async function loadProjects() {
         if (typeof lucide !== 'undefined') lucide.createIcons();
     } catch (error) {
         console.error('Error loading projects:', error);
-        const errorMsg = '<p class="text-center text-red-600 md:col-span-2">Failed to load projects.</p>';
+        const errorMsg = '<p class="text-center text-red-500 md:col-span-2">Failed to load projects.</p>'; // Use red accent for error
         if (loadingIndicator) loadingIndicator.outerHTML = errorMsg;
         else if (projectsList) projectsList.innerHTML = errorMsg;
     }
@@ -86,7 +86,7 @@ async function loadSpeaking() {
 
             if (imageUrl) {
                 const img = document.createElement('img');
-                const placeholderUrl = `https://placehold.co/400x250/F5F5F5/555555?text=${encodeURIComponent(title)}`; // Updated placeholder colors
+                const placeholderUrl = `https://placehold.co/400x250/F5F5F5/555555?text=${encodeURIComponent(title)}`;
                 img.src = imageUrl; img.alt = title;
                 img.className = "mb-4 rounded aspect-video object-cover w-full sm:w-1/3 sm:max-w-[250px] sm:float-right sm:ml-6 sm:mb-2";
                 img.onerror = () => { img.src = placeholderUrl; };
@@ -109,7 +109,7 @@ async function loadSpeaking() {
             contentWrapper.appendChild(metaP);
 
             const descDiv = document.createElement('div');
-            descDiv.className = 'text-secondary mb-4 clear-both'; descDiv.textContent = description;
+            descDiv.className = 'text-secondary mb-4 clear-both'; descDiv.innerHTML = description; // Use innerHTML if desc might contain simple tags
             contentWrapper.appendChild(descDiv);
 
             const linksDiv = document.createElement('div');
@@ -126,10 +126,12 @@ async function loadSpeaking() {
             if (videoUrl) {
                  let embedUrl = '';
                  try {
-                     if ((videoUrl.includes('https://youtu.be/xJdTxfYYMRQ5') || videoUrl.includes('https://youtu.be/xJdTxfYYMRQ6')) && new URL(videoUrl).searchParams.get('v')) { embedUrl = `https://www.youtube.com/embed/${new URL(videoUrl).searchParams.get('v')}`; }
-                     else if (videoUrl.includes('youtube.com/embed/')) { embedUrl = videoUrl; }
-                     else if (videoUrl.includes('youtu.be/')) { const videoId = new URL(videoUrl).pathname.substring(1); if(videoId) embedUrl = `https://www.youtube.com/embed/${videoId}`; }
-                 } catch(e) { /* Ignore */ }
+                     const urlObj = new URL(videoUrl); // Use URL constructor for parsing
+                     if ((urlObj.hostname.includes('https://youtu.be/xJdTxfYYMRQ7') || urlObj.hostname.includes('https://youtu.be/xJdTxfYYMRQ8')) && urlObj.searchParams.get('v')) { embedUrl = `https://www.youtube.com/embed/${urlObj.searchParams.get('v')}`; }
+                     else if (urlObj.hostname.includes('youtube.com/embed/')) { embedUrl = videoUrl; } // Assumes it's already an embed link
+                     else if (urlObj.hostname.includes('youtu.be/')) { const videoId = urlObj.pathname.substring(1); if(videoId) embedUrl = `https://www.youtube.com/embed/${videoId}`; }
+                 } catch(e) { console.warn("Could not parse video URL:", videoUrl); }
+
                 if (embedUrl) {
                      videoDiv.className = 'video-embed my-4 clear-both'; videoDiv.style.cssText = 'position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;';
                      const iframe = document.createElement('iframe'); iframe.src = embedUrl; iframe.title = `YouTube video player for ${title}`; iframe.frameBorder = '0'; iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"; iframe.allowFullscreen = true; iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%;';
@@ -146,86 +148,30 @@ async function loadSpeaking() {
                  linksDiv.appendChild(videoLink); linkAdded = true;
             }
             if(linkAdded) contentWrapper.appendChild(linksDiv);
-            if(videoEmbeddedOrPlaceholder || (videoLinkNeeded && !linkAdded)) contentWrapper.appendChild(videoDiv); // Add videoDiv if it has embed/placeholder OR if only video link exists
+            if(videoEmbeddedOrPlaceholder || (videoLinkNeeded && !linkAdded)) contentWrapper.appendChild(videoDiv);
 
             section.appendChild(contentWrapper); speakingList.appendChild(section);
         });
         if (typeof lucide !== 'undefined') lucide.createIcons();
     } catch (error) {
         console.error('Error loading speaking engagements:', error);
-        const errorMsg = '<p class="text-center text-red-600">Failed to load speaking engagements.</p>';
+        const errorMsg = '<p class="text-center text-red-500">Failed to load speaking engagements.</p>'; // Use red accent
         if (loadingIndicator) loadingIndicator.outerHTML = errorMsg;
         else if (speakingList) speakingList.innerHTML = errorMsg;
     }
 }
 
-/**
- * Initializes the recommendations carousel on the homepage.
- */
-function initCarousel() {
-    const container = document.getElementById('recommendations');
-    if (!container) return;
-    const track = container.querySelector('.carousel-track');
-    const slides = Array.from(track ? track.children : []);
-    const nextButton = container.querySelector('#nextBtn');
-    const prevButton = container.querySelector('#prevBtn');
-
-    if (!track || !nextButton || !prevButton || slides.length <= 1) {
-        if(nextButton) nextButton.style.display = 'none';
-        if(prevButton) prevButton.style.display = 'none';
-        return;
-    }
-
-    let slideWidth = container.querySelector('.carousel-container').clientWidth; // Use container width
-    let currentIndex = 0;
-
-    function moveToSlide(targetIndex) {
-        if (targetIndex < 0) targetIndex = 0;
-        if (targetIndex >= slides.length) targetIndex = slides.length - 1;
-
-        track.style.transform = `translateX(-${slideWidth * targetIndex}px)`; // Use template literal
-        currentIndex = targetIndex;
-
-        prevButton.disabled = currentIndex === 0;
-        nextButton.disabled = currentIndex === slides.length - 1;
-        prevButton.classList.toggle('opacity-50', currentIndex === 0);
-        nextButton.classList.toggle('opacity-50', currentIndex === slides.length - 1);
-    };
-
-    prevButton.addEventListener('click', () => moveToSlide(currentIndex - 1));
-    nextButton.addEventListener('click', () => moveToSlide(currentIndex + 1));
-
-    function recalculateWidth() {
-        slideWidth = container.querySelector('.carousel-container').clientWidth; // Recalculate based on container
-        track.style.transition = 'none'; // Disable transition during resize adjustment
-        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-        track.offsetHeight; // Force reflow
-        track.style.transition = 'transform 0.5s ease-in-out'; // Re-enable transition
-    };
-
-    if ('ResizeObserver' in window) {
-        const resizeObserver = new ResizeObserver(recalculateWidth);
-        // Observe the container whose width defines the slide width
-        resizeObserver.observe(container.querySelector('.carousel-container'));
-    } else {
-        window.addEventListener('resize', recalculateWidth);
-    }
-
-    moveToSlide(0);
-    nextButton.style.display = 'inline-flex';
-    prevButton.style.display = 'inline-flex';
-    console.log("Basic Carousel initialized.");
-}
-
+// --- REMOVED initCarousel function ---
 
 // --- Main Execution ---
 document.addEventListener('DOMContentLoaded', (event) => {
     if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
+        lucide.createIcons(); // Initialize static icons
     } else {
         console.error("Lucide library not loaded.");
     }
-    if (document.getElementById('recommendations')) initCarousel();
+
+    // Load dynamic content if containers exist
     if (document.getElementById('projects-list')) loadProjects();
     if (document.getElementById('speaking-list')) loadSpeaking();
 });

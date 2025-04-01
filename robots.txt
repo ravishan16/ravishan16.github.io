@@ -1,0 +1,10 @@
+# robots.txt for ravishankars.com (or your github.io domain)
+
+User-agent: *
+Allow: /
+
+# Optional: Specify the location of your sitemap (update URL if needed)
+Sitemap: https://ravishankars.com/sitemap.xml
+# Or if using the default github.io domain:
+# Sitemap: https://ravishan16.github.io/sitemap.xml
+

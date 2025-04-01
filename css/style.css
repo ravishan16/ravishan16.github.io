@@ -1,12 +1,12 @@
 /* css/style.css - For use with Tailwind CDN */
 
-/* Define Nunito Sans font (Keeping this for clean typography) */
+/* Define Nunito Sans font */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
 
 /* Define NEW Dieter Rams Inspired Colors */
 :root {
     --color-background: #FFFFFF; /* White */
-    --color-background-alt: #F5F5F5; /* Light Gray Alt */
+    --color-background-alt: #F0F0F0; /* Light Gray Alt */
     --color-text-primary: #111111; /* Black */
     --color-text-secondary: #555555; /* Medium Gray */
     --color-accent-primary: #D81920; /* Signal Red */
@@ -29,6 +29,7 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-top: 4rem; /* ADDED: Space for sticky navbar (h-16 = 4rem) */
 }
 
 /* Accent color application */
@@ -44,89 +45,44 @@ body {
 
 
 /* Card Styling */
-.content-card {
-    background-color: var(--color-card-bg);
-    transition: box-shadow 0.3s ease-in-out;
-    border: 1px solid var(--color-border-light); /* Add subtle border */
-}
-.content-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-.content-card i { /* Icon color within cards - now uses accent red */
-     color: var(--color-accent-primary);
-}
+.content-card { background-color: var(--color-card-bg); transition: box-shadow 0.3s ease-in-out; border: 1px solid var(--color-border-light); }
+.content-card:hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); }
+.content-card i { color: var(--color-accent-primary); }
 
 /* Tag Styling */
-.tag {
-    display: inline-block;
-    font-size: 0.75rem; /* text-xs */
-    background-color: var(--color-tag-bg);
-    color: var(--color-tag-text);
-    padding: 0.25rem 0.5rem; /* px-2 py-1 */
-    border-radius: 9999px; /* rounded-full */
-    font-weight: 500;
+.tag { display: inline-block; font-size: 0.75rem; background-color: var(--color-tag-bg); color: var(--color-tag-text); padding: 0.25rem 0.5rem; border-radius: 9999px; font-weight: 500; }
+
+/* Recommendation Section Specific Styles */
+/* Target footer and cite *within* the recommendation cards more specifically */
+#recommendations .content-card footer,
+#recommendations .content-card cite {
+    background: none !important; /* Force transparent background */
+    background-color: transparent !important; /* Force transparent background */
+    color: inherit; /* Inherit color from parent unless specified */
+}
+#recommendations .content-card footer p { /* Name */
+     color: var(--color-text-primary);
+     font-weight: 600;
+}
+#recommendations .content-card footer cite { /* Title */
+    display: block;
+    color: var(--color-text-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+#recommendations .recommendation-quote blockquote p {
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-bottom: 1rem;
 }
 
-
-/* Carousel Styling */
-.carousel-container {
-    overflow: hidden;
-    position: relative;
-    /* Background for the container area */
-    background-color: var(--color-background-alt);
-    border: 1px solid var(--color-border-light);
-}
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    /* align-items: stretch; /* Removed - let slides size naturally */
-}
-.carousel-slide {
-    min-width: 100%; /* Ensure slide takes full container width */
-    flex-shrink: 0;
-    box-sizing: border-box;
-    padding: 0; /* REMOVED padding - padding is now inside the card */
-}
-/* Card inside the slide */
-.carousel-slide .recommendation-card {
-     background-color: var(--color-card-bg);
-     border: none; /* Remove double border */
-     box-shadow: none; /* Remove double shadow */
-     height: 100%; /* Allow card to define slide height */
-     /* Use Tailwind: p-6 rounded-lg flex flex-col justify-center */
-}
-.carousel-blockquote p { color: var(--color-text-secondary); }
-.carousel-blockquote footer { color: var(--color-text-primary); background-color: transparent !important; margin-top: 0.5rem; }
-.carousel-blockquote cite { color: var(--color-text-secondary); background-color: transparent !important; font-style: normal; }
-
-/* Carousel Buttons */
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly less transparent */
-    border-radius: 9999px;
-    padding: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
-    display: none; /* Initially hidden */
-    border: 1px solid var(--color-border-light); /* Subtle border */
-    z-index: 10;
-}
-.carousel-button:hover { background-color: rgba(255, 255, 255, 1); }
-.carousel-button:disabled { opacity: 0.4; cursor: not-allowed; }
-/* Position buttons slightly inside */
-#prevBtn { left: 1rem; }
-#nextBtn { right: 1rem; }
-/* Adjust icon color */
-.carousel-button i { color: var(--color-text-secondary); }
 
 /* Footer Styling */
 footer { background-color: var(--color-footer-bg); padding-top: 2rem; padding-bottom: 2rem; text-align: center; }
 footer p { color: var(--color-footer-text); font-size: 0.875rem; }
 footer .social-icon { color: var(--color-footer-text); display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; transition: color 0.2s ease; }
-footer .social-icon:hover { color: var(--color-accent-primary); } /* Use Red for hover */
+footer .social-icon:hover { color: var(--color-accent-primary); }
 footer .social-icon i { width: 1.25rem; height: 1.25rem; stroke-width: 2; }
 
 /* Base styles for elements within main content */
@@ -141,7 +97,7 @@ main h3 { margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--color-text-pr
 #services .service-card h2 i { color: var(--color-accent-primary); }
 #services .service-card ul { list-style: none; padding-left: 0; margin-left: 0; space-y: 0.5rem; color: var(--color-text-secondary); }
 #services .service-card ul li { display: flex; align-items: start; gap: 0.5rem; }
-#services .service-card ul li i { color: var(--color-accent-primary); flex-shrink: 0; margin-top: 0.25rem; width: 0.875rem; height: 0.875rem; stroke-width: 2.5; } /* Use primary accent red */
+#services .service-card ul li i { color: var(--color-accent-primary); flex-shrink: 0; margin-top: 0.25rem; width: 0.875rem; height: 0.875rem; stroke-width: 2.5; }
 #speaker-bio p { color: var(--color-text-secondary); }
 
 /* Button Styling */
@@ -155,8 +111,8 @@ main h3 { margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--color-text-pr
 .border-light { border-color: var(--color-border-light); }
 
 /* Navigation adjustment */
-nav { border-bottom: 1px solid var(--color-border-light); } /* Add border to nav */
+nav { border-bottom: 1px solid var(--color-border-light); }
 
 /* Hero section adjustment */
-.hero-section { background-color: var(--color-background-alt); } /* Use light gray for hero */
+.hero-section { background-color: var(--color-background-alt); }
 
