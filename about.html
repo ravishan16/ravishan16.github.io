@@ -122,64 +122,34 @@
   <a class="skip-to-main-content" href="#main-content">
    Skip to main content
   </a>
-  <nav class="bg-card-bg shadow-sm sticky top-0 z-50 border-b border-light">
-   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
-     <div class="flex-shrink-0 flex items-center">
-      <a class="font-bold text-lg text-accent" href="index.html">
-       Ravi S.
-      </a>
-     </div>
-     <!-- Desktop Navigation -->
-     <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-      <a class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="index.html">
-       Home
-      </a>
-      <a class="border-accent text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold" href="about.html">
-       About
-      </a>
-      <a class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="projects.html">
-       Projects
-      </a>
-      <a class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="services.html">
-       Services
-      </a>
-      <a class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="speaking.html">
-       Speaking
-      </a>
-     </div>
-     <!-- Mobile menu button -->
-     <div class="flex items-center sm:hidden">
-      <button aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent" data-mobile-menu-button="" type="button">
-       <span class="sr-only">
-        Open main menu
-       </span>
-       <i aria-hidden="true" class="block h-6 w-6" data-lucide="menu">
-       </i>
-      </button>
-     </div>
+  <nav class="nav-container">
+    <div class="nav-wrapper">
+        <div class="nav-content">
+            <a href="index.html" class="nav-brand">Ravi S.</a>
+            <!-- Desktop Navigation -->
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item active">About</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="speaking.html" class="nav-item">Speaking</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button type="button" class="nav-mobile-button" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-button>
+                <span class="sr-only">Open main menu</span>
+                <i data-lucide="menu" aria-hidden="true"></i>
+            </button>
+        </div>
     </div>
-   </div>
-   <!-- Mobile menu -->
-   <div class="sm:hidden hidden" data-mobile-menu="" id="mobile-menu">
-    <div class="pt-2 pb-3 space-y-1">
-     <a class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium" href="index.html">
-      Home
-     </a>
-     <a aria-current="page" class="bg-accent border-accent text-white block pl-3 pr-4 py-2 text-base font-medium" href="about.html">
-      About
-     </a>
-     <a class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium" href="projects.html">
-      Projects
-     </a>
-     <a class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium" href="services.html">
-      Services
-     </a>
-     <a class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium" href="speaking.html">
-      Speaking
-     </a>
+
+    <!-- Mobile menu -->
+    <div class="nav-mobile-menu" id="mobile-menu" data-mobile-menu>
+        <a href="index.html" class="nav-mobile-item">Home</a>
+        <a href="about.html" class="nav-mobile-item active">About</a>
+        <a href="projects.html" class="nav-mobile-item">Projects</a>
+        <a href="services.html" class="nav-mobile-item">Services</a>
+        <a href="speaking.html" class="nav-mobile-item">Speaking</a>
     </div>
-   </div>
   </nav>
   <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16" id="main-content">
     <section id="about-me" class="py-20 bg-background-alt">
