@@ -1000,6 +1000,41 @@ a:hover {
   flex-grow: 1;
 }
 
+/* Blog card share buttons */
+.blog-card-share {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.blog-card-share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-background-alt);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-light);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.blog-card-share-button:hover {
+  background-color: var(--color-accent-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.blog-card-share-button i {
+  width: 1rem;
+  height: 1rem;
+}
+
 /* Blog post page */
 .blog-post-container {
   max-width: 50rem;
@@ -1091,4 +1126,57 @@ a:hover {
   text-align: center;
   padding: 2rem;
   color: var(--color-text-secondary);
+}
+
+/* Share buttons */
+.share-container {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  text-align: center;
+}
+
+.share-title {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-background-alt);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-light);
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.share-button:hover {
+  background-color: var(--color-accent-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.copy-feedback {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-accent-primary-darker);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.copy-feedback.visible {
+  opacity: 1;
 }

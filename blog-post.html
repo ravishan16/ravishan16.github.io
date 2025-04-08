@@ -130,6 +130,26 @@
 
     <main id="main-content">
       <div class="blog-post-container">
+        <!-- Move share buttons container to the top -->
+        <div id="share-container" class="share-container">
+          <div class="share-title">Share this post:</div>
+          <div class="share-buttons">
+            <button id="share-twitter" class="share-button" aria-label="Share on Twitter">
+              <i data-lucide="twitter"></i>
+            </button>
+            <button id="share-facebook" class="share-button" aria-label="Share on Facebook">
+              <i data-lucide="facebook"></i>
+            </button>
+            <button id="share-linkedin" class="share-button" aria-label="Share on LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </button>
+            <button id="share-copy" class="share-button" aria-label="Copy link">
+              <i data-lucide="link"></i>
+            </button>
+          </div>
+          <div id="copy-feedback" class="copy-feedback">Link copied to clipboard!</div>
+        </div>
+        
         <article id="blog-content" class="blog-post">
           <!-- Blog post will be dynamically loaded here -->
           <div class="loading">Loading post...</div>
@@ -290,7 +310,14 @@
           document.querySelectorAll('.blog-body img').forEach(img => {
             const src = img.getAttribute('src');
             if (src && !src.startsWith('/') && !src.startsWith('http')) {
-              img.src = '/' + src;
+              // Don't add a leading slash - keep the path relative
+              // Check if the markdown path needs to be considered
+              if (blog.markdown && blog.markdown.includes('/')) {
+                // If markdown is in a subdirectory, images might be relative to that
+                const markdownDir = blog.markdown.substring(0, blog.markdown.lastIndexOf('/') + 1);
+                img.src = markdownDir + src;
+              }
+              // Otherwise keep the path as is
             }
           });
           
@@ -298,7 +325,11 @@
           document.querySelectorAll('.blog-body video source').forEach(source => {
             const src = source.getAttribute('src');
             if (src && !src.startsWith('/') && !src.startsWith('http')) {
-              source.src = '/' + src;
+              // Apply the same logic as for images
+              if (blog.markdown && blog.markdown.includes('/')) {
+                const markdownDir = blog.markdown.substring(0, blog.markdown.lastIndexOf('/') + 1);
+                source.src = markdownDir + src;
+              }
             }
           });
           
@@ -306,6 +337,9 @@
           document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightElement(block);
           });
+          
+          // Set up share buttons functionality
+          setupShareButtons(blog.title);
           
           // Initialize icons
           if (typeof lucide !== 'undefined') {
@@ -327,6 +361,47 @@
       function formatDate(dateString) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Date(dateString).toLocaleDateString('en-US', options);
+      }
+      
+      // Set up share buttons functionality
+      function setupShareButtons(title) {
+        const pageUrl = window.location.href;
+        const shareText = `Check out "${title}" by Ravishankar Sivasubramaniam`;
+        
+        // Twitter/X share
+        document.getElementById('share-twitter').addEventListener('click', () => {
+          const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(shareText)}`;
+          window.open(twitterUrl, '_blank', 'noopener,noreferrer');
+        });
+        
+        // Facebook share
+        document.getElementById('share-facebook').addEventListener('click', () => {
+          const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+          window.open(facebookUrl, '_blank', 'noopener,noreferrer');
+        });
+        
+        // LinkedIn share
+        document.getElementById('share-linkedin').addEventListener('click', () => {
+          const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+          window.open(linkedinUrl, '_blank', 'noopener,noreferrer');
+        });
+        
+        // Copy link button
+        document.getElementById('share-copy').addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(pageUrl);
+            const feedback = document.getElementById('copy-feedback');
+            feedback.classList.add('visible');
+            
+            // Hide the feedback message after 2 seconds
+            setTimeout(() => {
+              feedback.classList.remove('visible');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy URL: ', err);
+            alert('Failed to copy the link. Please try again.');
+          }
+        });
       }
     </script>
   </body>
