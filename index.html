@@ -1,139 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="p:domain_verify" content="43169353670bdc182bb416c7c14319b2" />
 
-    <title>Ravishankar Sivasubramaniam - Portfolio | Tech Leader, AI & Data Strategist</title>
-    <meta name="description" content="Personal portfolio of Ravishankar Sivasubramaniam (Ravi), showcasing expertise in technology leadership, AI, data strategy, cloud architecture, DevOps, and automation.">
-    <meta name="keywords" content="Ravishankar Sivasubramaniam, Ravi, Portfolio, Technology Leader, AI, Data Science, Machine Learning, Cloud, GCP, AWS, DevOps, Automation, Python, Chicago">
-    <link rel="canonical" href="https://ravishan16.github.io/"> <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+    <title>
+      Ravishankar Sivasubramaniam - Portfolio | Tech Leader, AI & Data
+      Strategist
+    </title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer type="module" src="https://unpkg.com/lucide@latest"></script>
-    <script defer nomodule src="https://cdn.jsdelivr.net/npm/lucide-static@latest/dist/lucide.legacy.js"></script>
-</head>
-<body class="antialiased"> <nav class="bg-card-bg shadow-sm sticky top-0 z-50 border-b border-light">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16"> <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-bold text-lg text-accent">Ravi S.</a>
-                </div>
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <a href="index.html" class="border-accent text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold">Home</a>
-                    <a href="about.html" class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
-                    <a href="projects.html" class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Projects</a>
-                    <a href="services.html" class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
-                    <a href="speaking.html" class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Speaking</a>
-                </div>
-                </div>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Explore the portfolio of Ravishankar Sivasubramaniam, a technology leader specializing in AI, cloud architecture, and automation. Learn about his projects, services, and speaking engagements."
+    />
+    <meta
+      name="keywords"
+      content="Ravishankar Sivasubramaniam, AI, Cloud Architecture, Automation, Portfolio, Technology Leader"
+    />
+    <link rel="canonical" href="https://ravishankars.com" />
+
+    <!-- OpenGraph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Ravishankar Sivasubramaniam - Tech Leader & AI Strategist"
+    />
+    <meta
+      property="og:description"
+      content="Personal portfolio showcasing 20+ years of expertise in technology leadership, AI, data strategy, cloud architecture, and automation."
+    />
+    <meta
+      property="og:image"
+      content="https://ravishankars.com/images/ravishankar_sivasubramaniam_profile.JPG"
+    />
+    <meta property="og:url" content="https://ravishankars.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@ravishankar_s" />
+    <meta
+      name="twitter:title"
+      content="Ravishankar Sivasubramaniam - Tech Leader & AI Strategist"
+    />
+    <meta
+      name="twitter:description"
+      content="Personal portfolio showcasing 20+ years of expertise in technology leadership, AI, data strategy, cloud architecture, and automation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ravishankars.com/images/ravishankar_sivasubramaniam_profile.JPG"
+    />
+
+    <!-- Manifest and Theme Color -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#D81920" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ravishankar Sivasubramaniam",
+        "alternateName": "Ravi",
+        "url": "https://ravishankars.com",
+        "image": "https://ravishankars.com/images/ravishankar_sivasubramaniam_profile.JPG",
+        "sameAs": [
+          "https://github.com/ravishan16/",
+          "https://www.linkedin.com/in/ravishan16/",
+          "https://twitter.com/ravishankar_s"
+        ],
+        "jobTitle": "Technology Leader",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Fannie Mae"
+        },
+        "description": "Technology leader with 20+ years of experience in AI, data strategy, cloud architecture, and automation."
+      }
+    </script>
+
+    <!-- Performance Optimization -->
+    <link
+      rel="preload"
+      href="https://cdn.tailwindcss.com?v=3.4.1"
+      as="script"
+    />
+    <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119195186-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-119195186-1");
+    </script>
+
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="https://unpkg.com/lucide@latest" type="module"></script>
+    <script defer nomodule src="https://unpkg.com/lucide-static@latest/dist/lucide.legacy.js"></script>
+  </head>
+  <body class="antialiased">
+    <a href="#main-content" class="skip-to-main-content"
+      >Skip to main content</a
+    >
+    <nav class="bg-card-bg shadow-sm sticky top-0 z-50 border-b border-light">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="font-bold text-lg text-accent"
+              >Ravi S.</a
+            >
+          </div>
+          <!-- Desktop Navigation -->
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a
+              href="index.html"
+              class="border-accent text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >About</a
+            >
+            <a
+              href="projects.html"
+              class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >Projects</a
+            >
+            <a
+              href="services.html"
+              class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >Services</a
+            >
+            <a
+              href="speaking.html"
+              class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >Speaking</a
+            >
+          </div>
+          <!-- Mobile menu button -->
+          <div class="flex items-center sm:hidden">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              data-mobile-menu-button
+            >
+              <span class="sr-only">Open main menu</span>
+              <i
+                data-lucide="menu"
+                class="block h-6 w-6"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </div>
         </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="sm:hidden hidden" id="mobile-menu" data-mobile-menu>
+        <div class="pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="bg-accent border-accent text-white block pl-3 pr-4 py-2 text-base font-medium"
+            aria-current="page"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium"
+            >About</a
+          >
+          <a
+            href="projects.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium"
+            >Projects</a
+          >
+          <a
+            href="services.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium"
+            >Services</a
+          >
+          <a
+            href="speaking.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium"
+            >Speaking</a
+          >
+        </div>
+      </div>
     </nav>
 
-    <header class="py-16 md:py-24 hero-section"> <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="images/ravishankar_sivasubramaniam_profile.JPG" alt="Ravishankar Sivasubramaniam profile picture" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-6 shadow-lg border-4 border-white" onerror="this.onerror=null; this.src='https://placehold.co/128x128/F0F0F0/111111?text=Ravi';">
-            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-3">Ravishankar Sivasubramaniam</h1>
-            <p class="text-xl md:text-2xl text-accent font-semibold mb-6">Technology Leader | AI & Data Strategist | Automation Expert</p>
-            <p class="max-w-2xl mx-auto text-secondary mb-8">
-                A technologist with two decades of experience architecting and building scalable data, AI, and enterprise systems. Passionate about automation, team building, and solving complex challenges.
-                <a href="about.html" class="text-accent hover:text-accent-darker font-medium">Learn more →</a>
-            </p>
+    <!-- Hero Section -->
+    <section id="hero" class="text-center bg-accent text-white py-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <img
+          src="images/profile_avatar_circle.png"
+          alt="Ravishankar Sivasubramaniam"
+          class="rounded-full mx-auto mb-6 w-32 h-32 object-cover shadow-lg"
+        />
+        <h1 class="text-4xl font-bold mb-4">Ravishankar Sivasubramaniam</h1>
+        <p class="text-lg mb-6">
+          Technologist | Architect | Pragmatic Leader | Automation Expert
+        </p>
+        <a href="#services" class="cta-button">Explore My Services</a>
+      </div>
+    </section>
+
+    <main
+      id="main-content"
+      class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+    >
+      <!-- Key Skills Section -->
+      <section
+        id="skills"
+        aria-labelledby="skills-heading"
+        class="py-16 bg-background-alt"
+      >
+        <h2
+          id="skills-heading"
+          class="text-3xl font-bold text-center mb-8 text-primary"
+        >
+          Key Skills
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center"
+        >
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="brain-circuit" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Gen AI & LLMOps</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i
+              data-lucide="message-square-code"
+              class="mx-auto h-8 w-8 mb-2"
+            ></i>
+            <span class="font-semibold text-sm text-primary"
+              >Prompt Engineering</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="bot" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Agentic AI Systems</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="database" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Data Engineering</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="cloud" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Cloud Architecture</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="terminal" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >DevOps & Automation</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="code" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Python Development</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="users" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Tech Leadership</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="layers" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Cross-functional Collaboration</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="handshake" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Mentorship & Coaching</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="server" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Solution Architecture</span
+            >
+          </div>
+          <div class="content-card p-4 rounded-lg shadow hover:shadow-md">
+            <i data-lucide="zap" class="mx-auto h-8 w-8 mb-2"></i>
+            <span class="font-semibold text-sm text-primary"
+              >Workflow Optimization</span
+            >
+          </div>
         </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-        <section id="skills" aria-labelledby="skills-heading" class="mb-16">
-            <h2 id="skills-heading" class="text-3xl font-bold text-center mb-8 text-primary">Key Skills</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
-                <div class="content-card p-4 rounded-lg shadow hover:shadow-md"><i data-lucide="brain-circuit" class="mx-auto h-8 w-8 mb-2" aria-hidden="true"></i><span class="font-semibold text-sm text-primary">Gen AI & LLMOps</span></div>
-                <div class="content-card p-4 rounded-lg shadow hover:shadow-md"><i data-lucide="database" class="mx-auto h-8 w-8 mb-2" aria-hidden="true"></i><span class="font-semibold text-sm text-primary">Data Engineering</span></div>
-                <div class="content-card p-4 rounded-lg shadow hover:shadow-md"><i data-lucide="cloud" class="mx-auto h-8 w-8 mb-2" aria-hidden="true"></i><span class="font-semibold text-sm text-primary">Cloud Architecture</span></div>
-                <div class="content-card p-4 rounded-lg shadow hover:shadow-md"><i data-lucide="terminal" class="mx-auto h-8 w-8 mb-2" aria-hidden="true"></i><span class="font-semibold text-sm text-primary">DevOps & Automation</span></div>
-                <div class="content-card p-4 rounded-lg shadow hover:shadow-md"><i data-lucide="code" class="mx-auto h-8 w-8 mb-2" aria-hidden="true"></i><span class="font-semibold text-sm text-primary">Python Development</span></div>
-                <div class="content-card p-4 rounded-lg shadow hover:shadow-md"><i data-lucide="users" class="mx-auto h-8 w-8 mb-2" aria-hidden="true"></i><span class="font-semibold text-sm text-primary">Tech Leadership</span></div>
-                <div class="content-card p-4 rounded-lg shadow hover:shadow-md"><i data-lucide="server" class="mx-auto h-8 w-8 mb-2" aria-hidden="true"></i><span class="font-semibold text-sm text-primary">Solution Architecture</span></div>
-                <div class="content-card p-4 rounded-lg shadow hover:shadow-md"><i data-lucide="zap" class="mx-auto h-8 w-8 mb-2" aria-hidden="true"></i><span class="font-semibold text-sm text-primary">Optimization</span></div>
-            </div>
-        </section>
-
-        <section id="services" aria-labelledby="services-heading" class="mb-16">
-            <h2 id="services-heading" class="text-3xl font-bold text-center mb-8 text-primary">How I Can Help</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"><i data-lucide="bot" class="mx-auto h-10 w-10 mb-3" aria-hidden="true"></i><h3 class="text-lg font-semibold mb-2 text-primary">Generative AI</h3><p class="text-sm text-secondary mb-4">POCs, chatbot development, AI agent creation, training, and strategy.</p><a href="services.html#gen-ai" class="text-sm text-accent hover:text-accent-darker font-medium">Details →</a></div>
-                <div class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"><i data-lucide="settings-2" class="mx-auto h-10 w-10 mb-3" aria-hidden="true"></i><h3 class="text-lg font-semibold mb-2 text-primary">Infrastructure Optimization</h3><p class="text-sm text-secondary mb-4">Analyze landscapes, automate processes, and remove redundancy.</p><a href="services.html#infra-opt" class="text-sm text-accent hover:text-accent-darker font-medium">Details →</a></div>
-                <div class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"><i data-lucide="layout-grid" class="mx-auto h-10 w-10 mb-3" aria-hidden="true"></i><h3 class="text-lg font-semibold mb-2 text-primary">Application Build</h3><p class="text-sm text-secondary mb-4">Full-stack web apps, data pipelines, integrations, and API development.</p><a href="services.html#app-build" class="text-sm text-accent hover:text-accent-darker font-medium">Details →</a></div>
-                <div class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"><i data-lucide="rocket" class="mx-auto h-10 w-10 mb-3" aria-hidden="true"></i><h3 class="text-lg font-semibold mb-2 text-primary">Code Optimization</h3><p class="text-sm text-secondary mb-4">Refactoring, modernization, cloud/serverless rewrites for efficiency.</p><a href="services.html#code-opt" class="text-sm text-accent hover:text-accent-darker font-medium">Details →</a></div>
-            </div>
-        </section>
-
-        <section id="recommendations" aria-labelledby="recommendations-heading" class="mb-16">
-            <h2 id="recommendations-heading" class="text-3xl font-bold text-center mb-8 text-primary">Recommendations</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-                <div class="content-card p-6 rounded-lg shadow flex flex-col">
-                    <div class="flex-grow recommendation-quote">
-                        <blockquote class="text-left">
-                            <p class="text-lg italic mb-4">"Ravi is a great manager, leader, and one of the best humans you will ever meet! He leads by example gives you the autonomy that you deserve... I was able to grow exponentially..."</p>
-                        </blockquote>
-                    </div>
-                    <footer class="mt-auto pt-4 border-t border-light">
-                        <p class="font-semibold text-primary">Talibuddeen Abdul-Hakeem</p>
-                        <cite class="block text-sm text-secondary not-italic">Senior Software Engineer, Palo Alto Networks</cite>
-                    </footer>
-                </div>
-                 <div class="content-card p-6 rounded-lg shadow flex flex-col">
-                    <div class="flex-grow recommendation-quote">
-                        <blockquote class="text-left">
-                            <p class="text-lg italic mb-4">"...he is well versed in both business and technology - it is often hard to find people who understand both sides of the aisle and also help synthesize the needs to drive a solution..."</p>
-                        </blockquote>
-                    </div>
-                    <footer class="mt-auto pt-4 border-t border-light">
-                         <p class="font-semibold text-primary">Rak-Joon Choi</p>
-                         <cite class="block text-sm text-secondary not-italic">Worldwide Strategic Business Development Executive, IBM</cite>
-                    </footer>
-                </div>
-                 <div class="content-card p-6 rounded-lg shadow flex flex-col">
-                     <div class="flex-grow recommendation-quote">
-                        <blockquote class="text-left">
-                            <p class="text-lg italic mb-4">"One of the smartest technical brains I have met in my career. Highly recommend Ravishankar for any architecture design or product development initiative."</p>
-                        </blockquote>
-                    </div>
-                     <footer class="mt-auto pt-4 border-t border-light">
-                         <p class="font-semibold text-primary">Asha Saxena</p>
-                         <cite class="block text-sm text-secondary not-italic">Founder & CEO, World Leaders in Data and Al</cite>
-                    </footer>
-                </div>
-            </div>
-        </section>
-
-        <section class="text-center grid grid-cols-1 md:grid-cols-2 gap-8 mb-16" aria-label="Quick Links">
-            <div class="content-card p-6 rounded-lg shadow hover:shadow-md"><h3 class="text-xl font-semibold mb-2 text-accent">View Projects</h3><p class="text-secondary mb-4">Explore a selection of personal and professional projects.</p><a href="projects.html" class="cta-button">Projects →</a></div>
-            <div class="content-card p-6 rounded-lg shadow hover:shadow-md"><h3 class="text-xl font-semibold mb-2 text-accent">Speaking Engagements</h3><p class="text-secondary mb-4">Check out past talks, presentations, and mentoring events.</p><a href="speaking.html" class="cta-button">Speaking →</a></div>
-        </section>
-
-        <section id="cta" aria-labelledby="cta-heading" class="text-center bg-card-bg p-12 rounded-lg shadow border border-light mb-16">
-            <h2 id="cta-heading" class="text-3xl font-bold mb-4 text-primary">Let's Connect</h2>
-            <p class="text-secondary mb-6 max-w-xl mx-auto">Interested in collaborating or discussing opportunities? Feel free to reach out!</p>
-            <a href="mailto:contact@ravishankars.com" class="cta-button">
-                <i data-lucide="mail" class="inline-block h-4 w-4 mr-1 align-text-bottom" aria-hidden="true"></i> Get in Touch
+      </section>
+      <!-- Services Section -->
+      <section
+        id="services"
+        aria-labelledby="services-heading"
+        class="py-16 bg-background-alt"
+      >
+        <h2
+          id="services-heading"
+          class="text-3xl font-bold text-center mb-8 text-primary"
+        >
+          Services
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"
+          >
+            <i
+              data-lucide="bot"
+              class="mx-auto h-10 w-10 mb-3 text-accent"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-lg font-semibold mb-2 text-primary">
+              AI & Automation
+            </h3>
+            <p class="text-sm text-secondary mb-4">
+              Custom AI agents, generative AI integration, and intelligent
+              process automation.
+            </p>
+            <a
+              href="services.html#ai-automation"
+              class="text-sm text-accent hover:text-accent-darker font-medium"
+            >
+              Learn More →
             </a>
-        </section>
+          </div>
+          <div
+            class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"
+          >
+            <i
+              data-lucide="cloud"
+              class="mx-auto h-10 w-10 mb-3 text-accent"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-lg font-semibold mb-2 text-primary">
+              Infrastructure Modernization
+            </h3>
+            <p class="text-sm text-secondary mb-4">
+              Cloud migration, IaC, and legacy system refactoring for modern
+              architectures.
+            </p>
+            <a
+              href="services.html#infrastructure-modernization"
+              class="text-sm text-accent hover:text-accent-darker font-medium"
+            >
+              Learn More →
+            </a>
+          </div>
+          <div
+            class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"
+          >
+            <i
+              data-lucide="settings"
+              class="mx-auto h-10 w-10 mb-3 text-accent"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-lg font-semibold mb-2 text-primary">
+              DevOps & Platform Engineering
+            </h3>
+            <p class="text-sm text-secondary mb-4">
+              CI/CD pipelines, observability, and DevSecOps for secure,
+              efficient platforms.
+            </p>
+            <a
+              href="services.html#devops-platform-engineering"
+              class="text-sm text-accent hover:text-accent-darker font-medium"
+            >
+              Learn More →
+            </a>
+          </div>
+          <div
+            class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"
+          >
+            <i
+              data-lucide="database"
+              class="mx-auto h-10 w-10 mb-3 text-accent"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-lg font-semibold mb-2 text-primary">
+              Data & Analytics Engineering
+            </h3>
+            <p class="text-sm text-secondary mb-4">
+              ETL pipelines, data platforms, and AI-driven analytics solutions.
+            </p>
+            <a
+              href="services.html#data-analytics-engineering"
+              class="text-sm text-accent hover:text-accent-darker font-medium"
+            >
+              Learn More →
+            </a>
+          </div>
+          <div
+            class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"
+          >
+            <i
+              data-lucide="code"
+              class="mx-auto h-10 w-10 mb-3 text-accent"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-lg font-semibold mb-2 text-primary">
+              Application Engineering
+            </h3>
+            <p class="text-sm text-secondary mb-4">
+              Full-stack development, API design, and end-to-end product
+              delivery.
+            </p>
+            <a
+              href="services.html#application-engineering"
+              class="text-sm text-accent hover:text-accent-darker font-medium"
+            >
+              Learn More →
+            </a>
+          </div>
+          <div
+            class="content-card p-6 rounded-lg shadow hover:shadow-md text-center"
+          >
+            <i
+              data-lucide="mic"
+              class="mx-auto h-10 w-10 mb-3 text-accent"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-lg font-semibold mb-2 text-primary">
+              Mentorship, Speaking & Workshops
+            </h3>
+            <p class="text-sm text-secondary mb-4">
+              Keynotes, tech talks, and hands-on workshops on AI, DevOps,
+              product strategy, and leadership. Personalized mentorship for
+              individuals and teams.
+            </p>
+            <a
+              href="services.html#mentorship-speaking"
+              class="text-sm text-accent hover:text-accent-darker font-medium"
+            >
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </section>
 
+      <section
+        id="recommendations"
+        aria-labelledby="recommendations-heading"
+        class="mb-16"
+      >
+        <h2
+          id="recommendations-heading"
+          class="text-3xl font-bold text-center mb-8 text-primary"
+        >
+          Recommendations
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <div class="content-card p-6 rounded-lg shadow flex flex-col">
+            <div class="flex-grow recommendation-quote">
+              <blockquote class="text-left">
+                <p class="text-lg italic mb-4">
+                  "Ravi is a great manager, leader, and one of the best humans
+                  you will ever meet! He leads by example gives you the autonomy
+                  that you deserve... I was able to grow exponentially..."
+                </p>
+              </blockquote>
+            </div>
+            <footer class="mt-auto pt-4 border-t border-light">
+              <p class="font-semibold text-primary">Talibuddeen Abdul-Hakeem</p>
+              <cite class="block text-sm text-secondary not-italic"
+                >Senior Software Engineer, Palo Alto Networks</cite
+              >
+            </footer>
+          </div>
+          <div class="content-card p-6 rounded-lg shadow flex flex-col">
+            <div class="flex-grow recommendation-quote">
+              <blockquote class="text-left">
+                <p class="text-lg italic mb-4">
+                  "...he is well versed in both business and technology - it is
+                  often hard to find people who understand both sides of the
+                  aisle and also help synthesize the needs to drive a
+                  solution..."
+                </p>
+              </blockquote>
+            </div>
+            <footer class="mt-auto pt-4 border-t border-light">
+              <p class="font-semibold text-primary">Rak-Joon Choi</p>
+              <cite class="block text-sm text-secondary not-italic"
+                >Worldwide Strategic Business Development Executive, IBM</cite
+              >
+            </footer>
+          </div>
+          <div class="content-card p-6 rounded-lg shadow flex flex-col">
+            <div class="flex-grow recommendation-quote">
+              <blockquote class="text-left">
+                <p class="text-lg italic mb-4">
+                  "One of the smartest technical brains I have met in my career.
+                  Highly recommend Ravishankar for any architecture design or
+                  product development initiative."
+                </p>
+              </blockquote>
+            </div>
+            <footer class="mt-auto pt-4 border-t border-light">
+              <p class="font-semibold text-primary">Asha Saxena</p>
+              <cite class="block text-sm text-secondary not-italic"
+                >Founder & CEO, World Leaders in Data and Al</cite
+              >
+            </footer>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="text-center grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
+        aria-label="Quick Links"
+      >
+        <div class="content-card p-6 rounded-lg shadow hover:shadow-md">
+          <h3 class="text-xl font-semibold mb-2 text-accent">View Projects</h3>
+          <p class="text-secondary mb-4">
+            Explore a selection of personal and professional projects.
+          </p>
+          <a href="projects.html" class="cta-button">Projects →</a>
+        </div>
+        <div class="content-card p-6 rounded-lg shadow hover:shadow-md">
+          <h3 class="text-xl font-semibold mb-2 text-accent">
+            Speaking Engagements
+          </h3>
+          <p class="text-secondary mb-4">
+            Check out past talks, presentations, and mentoring events.
+          </p>
+          <a href="speaking.html" class="cta-button">Speaking →</a>
+        </div>
+      </section>
+
+      <section
+        id="cta"
+        aria-labelledby="cta-heading"
+        class="text-center bg-card-bg p-12 rounded-lg shadow border border-light mb-16"
+      >
+        <h2 id="cta-heading" class="text-3xl font-bold mb-4 text-primary">
+          Let's Connect
+        </h2>
+        <p class="text-secondary mb-6 max-w-xl mx-auto">
+          Interested in collaborating or discussing opportunities? Feel free to
+          reach out!
+        </p>
+        <a href="mailto:contact@ravishankars.com" class="cta-button">
+          <i
+            data-lucide="mail"
+            class="inline-block h-4 w-4 mr-1 align-text-bottom"
+            aria-hidden="true"
+          ></i>
+          Get in Touch
+        </a>
+      </section>
     </main>
 
     <footer role="contentinfo">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="mailto:contact@ravishankars.com" class="social-icon" title="Email"><i data-lucide="mail"></i></a>
-                <a href="https://github.com/ravishan16/" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub"><i data-lucide="github"></i></a>
-                <a href="https://www.linkedin.com/in/ravishan16/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn"><i data-lucide="linkedin"></i></a>
-                <a href="https://twitter.com/ravishankar_s" target="_blank" rel="noopener noreferrer" class="social-icon" title="Twitter"><i data-lucide="twitter"></i></a>
-            </div>
-            <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> Ravishankar Sivasubramaniam. All Rights Reserved.</p>
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+          <a
+            href="mailto:contact@ravishankars.com"
+            class="social-icon"
+            title="Email"
+            ><i data-lucide="mail"></i
+          ></a>
+          <a
+            href="https://github.com/ravishan16/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="GitHub"
+            ><i data-lucide="github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ravishan16/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="LinkedIn"
+            ><i data-lucide="linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/ravishankar_s"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="Twitter"
+            ><i data-lucide="twitter"></i
+          ></a>
         </div>
+        <p class="text-sm">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Ravishankar Sivasubramaniam. All Rights Reserved.
+        </p>
+      </div>
     </footer>
 
     <script defer src="js/main.js"></script>
 
-</body>
+    <!-- Add lazy loading to images -->
+    <!-- <img src="images/ravishankar_sivasubramaniam_profile.JPG" alt="Ravishankar Sivasubramaniam Profile" loading="lazy"> -->
+  </body>
 </html>

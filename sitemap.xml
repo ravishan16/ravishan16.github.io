@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ravishan16.github.io/</loc> <lastmod>2025-04-01</lastmod> <changefreq>monthly</changefreq>
+    <loc>https://ravishankars.com/</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ravishan16.github.io/about.html</loc>
-    <lastmod>2025-04-01</lastmod>
+    <loc>https://ravishankars.com/about.html</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ravishankars.com/projects.html</loc>
+    <lastmod>2025-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ravishan16.github.io/projects.html</loc>
-    <lastmod>2025-04-01</lastmod>
+    <loc>https://ravishankars.com/services.html</loc>
+    <lastmod>2025-04-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ravishan16.github.io/services.html</loc>
-    <lastmod>2025-04-01</lastmod>
+    <loc>https://ravishankars.com/speaking.html</loc>
+    <lastmod>2025-04-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://ravishan16.github.io/speaking.html</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  </urlset>
+</urlset>

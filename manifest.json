@@ -1,0 +1,23 @@
+{
+  "name": "Ravishankar Sivasubramaniam Portfolio",
+  "short_name": "Ravi S.",
+  "description": "Technology Leader, AI & Data Strategist, showcasing expertise in cloud architecture, automation, and development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D81920",
+  "icons": [
+    {
+      "src": "images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

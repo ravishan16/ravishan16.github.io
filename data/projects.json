@@ -1,35 +1,101 @@
 [
   {
-    "id": "express-api",
-    "title": "ExpressApi",
-    "description": "AWS Serverless Lambda REST API boilerplate using Node.js, Express, and DynamoDB. Deployed via Claudia.js.",
+    "id": "dotfile",
+    "title": "dotFile",
+    "description": "A decade-long macOS automation and setup guide for developers. Includes shell scripts, package installers, and extensive documentation to streamline your Mac setup from zero to hero.",
     "imageUrl": null,
-    "githubUrl": "https://github.com/ravishan16/ExpressApi",
-    "liveUrl": null,
-    "readMoreUrl": null,
-    "dateMMYYYY": "04/2019",
-    "tags": ["Node.js", "AWS Lambda", "Serverless", "DynamoDB", "API", "JavaScript", "Claudia.js"]
+    "githubUrl": "https://github.com/ravishan16/dotFile",
+    "readMoreUrl": "https://dev.to/ravishan16/-automate-your-mac-setup-a-developers-guide-2c03",
+    "dateMMYYYY": "01/2014",
+    "tags": [
+      "macOS",
+      "Automation",
+      "Shell",
+      "Homebrew",
+      "Developer Tools"
+    ]
   },
   {
     "id": "count-by-alexa",
     "title": "CountByAlexa",
-    "description": "Interactive Alexa skill using Flask-Ask for learning skip counting. Deploys serverlessly to AWS Lambda/API Gateway via Zappa.",
+    "description": "A Flask-Ask-powered Alexa skill built in 2019 for skip counting. Designed as a template for developers to create extensible voice applications. Featured on the Alexa Marketplace.",
     "imageUrl": null,
     "githubUrl": "https://github.com/ravishan16/CountByAlexa",
-    "liveUrl": null,
+    "readMoreUrl": null,
+    "dateMMYYYY": "04/2019",
+    "tags": [
+      "Python",
+      "Flask",
+      "Alexa Skill",
+      "Serverless",
+      "Zappa",
+      "Voice UI"
+    ]
+  },
+  {
+    "id": "chess-engine",
+    "title": "chess_engine",
+    "description": "Hackathon-winning project that reimagines legacy PL/SQL as a modern stack. Built in 2 days using Claude + OpenAI to automate logic extraction and conversion. Fast, fun, and functional.",
+    "imageUrl": null,
+    "githubUrl": "https://github.com/ravishan16/chess_engine",
+    "readMoreUrl": null,
+    "dateMMYYYY": "06/2023",
+    "tags": [
+      "OpenAI",
+      "Claude",
+      "Hackathon",
+      "PL/SQL Modernization",
+      "Python",
+      "Automation"
+    ]
+  },
+  {
+    "id": "fraudml",
+    "title": "fraudml",
+    "description": "A Flask-based ML app built during a code interview in 2019. Features a trained model, Google Cloud deployment, Dockerization, CI/CD pipelines, and pre-Agent era devops rigor.",
+    "imageUrl": null,
+    "githubUrl": "https://github.com/ravishan16/fraudml",
+    "readMoreUrl": null,
+    "dateMMYYYY": "01/2019",
+    "tags": [
+      "Flask",
+      "ML",
+      "Docker",
+      "CI/CD",
+      "Google Cloud",
+      "DevOps",
+      "Python"
+    ]
+  },
+  {
+    "id": "express-api",
+    "title": "ExpressApi",
+    "description": "Serverless REST API boilerplate built in 2017 with Node.js, Express, and DynamoDB. Deployed via Claudia.js to AWS Lambda and API Gateway. A lightweight, production-ready foundation.",
+    "imageUrl": null,
+    "githubUrl": "https://github.com/ravishan16/ExpressApi",
     "readMoreUrl": null,
     "dateMMYYYY": "04/2017",
-     "tags": ["Python", "Flask", "Alexa Skill", "AWS Lambda", "Serverless", "Zappa"]
+    "tags": [
+      "Node.js",
+      "AWS Lambda",
+      "Serverless",
+      "DynamoDB",
+      "API",
+      "Claudia.js"
+    ]
   },
   {
     "id": "blueink-remover",
     "title": "BlueInk Remover",
-    "description": "A utility script likely involving image processing to remove specific color casts (e.g., blue ink from scanned documents). [Note: Add more detailed description if available.]",
+    "description": "A utility script likely involving image processing to remove specific color casts (e.g., blue ink from scanned documents).",
     "imageUrl": null,
     "githubUrl": "https://github.com/ravishan16/blueink-remover",
     "liveUrl": null,
     "readMoreUrl": null,
     "dateMMYYYY": "01/2020",
-    "tags": ["Python", "Image Processing"]
+    "tags": [
+      "Python",
+      "Image Processing"
+    ]
   }
 ]
