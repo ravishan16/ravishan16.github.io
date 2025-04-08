@@ -77,6 +77,9 @@ async function loadBlogPosts() {
             lucide.createIcons();
         }
         
+        // Set up share functionality for all blog cards
+        setupBlogCardSharing();
+        
     } catch (error) {
         console.error('Error loading blog posts:', error);
         blogList.innerHTML = '<p class="error">Failed to load blog posts. Please try again later.</p>';
@@ -94,10 +97,11 @@ function renderBlogPosts(blogs, container) {
     container.innerHTML = blogs.map(blog => {
         const imageUrl = blog.coverImage || blog.imageUrl || 'blog/default/images/default-cover.jpg';
         const formattedDate = formatDate(blog.date);
+        const blogUrl = `blog-post.html?id=${blog.id}`;
         
         return `
             <article class="content-card blog-card">
-                <a href="blog-post.html?id=${blog.id}" class="blog-link">
+                <a href="${blogUrl}" class="blog-link">
                     <div class="blog-image">
                         <img 
                             data-src="${imageUrl}" 
@@ -117,6 +121,22 @@ function renderBlogPosts(blogs, container) {
                         </div>
                     </div>
                 </a>
+                
+                <!-- Add share buttons to each blog card -->
+                <div class="blog-card-share">
+                    <button class="blog-card-share-button" data-share="twitter" data-url="${blogUrl}" data-title="${blog.title}" aria-label="Share on Twitter">
+                        <i data-lucide="twitter"></i>
+                    </button>
+                    <button class="blog-card-share-button" data-share="facebook" data-url="${blogUrl}" data-title="${blog.title}" aria-label="Share on Facebook">
+                        <i data-lucide="facebook"></i>
+                    </button>
+                    <button class="blog-card-share-button" data-share="linkedin" data-url="${blogUrl}" data-title="${blog.title}" aria-label="Share on LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </button>
+                    <button class="blog-card-share-button" data-share="copy" data-url="${blogUrl}" data-title="${blog.title}" aria-label="Copy link">
+                        <i data-lucide="link"></i>
+                    </button>
+                </div>
             </article>
         `;
     }).join('');
@@ -136,6 +156,52 @@ function renderBlogPosts(blogs, container) {
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-US', options);
+}
+
+// Set up share functionality for blog cards
+function setupBlogCardSharing() {
+    document.querySelectorAll('.blog-card-share-button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const shareType = button.getAttribute('data-share');
+            const url = new URL(button.getAttribute('data-url'), window.location.origin).toString();
+            const title = button.getAttribute('data-title');
+            const shareText = `Check out "${title}" by Ravishankar Sivasubramaniam`;
+            
+            switch (shareType) {
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(shareText)}`, '_blank', 'noopener,noreferrer');
+                    break;
+                case 'facebook':
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+                    break;
+                case 'linkedin':
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'noopener,noreferrer');
+                    break;
+                case 'copy':
+                    navigator.clipboard.writeText(url)
+                        .then(() => {
+                            // Create and show a temporary feedback message
+                            const card = button.closest('.blog-card');
+                            const feedback = document.createElement('div');
+                            feedback.className = 'copy-feedback visible';
+                            feedback.textContent = 'Link copied to clipboard!';
+                            card.appendChild(feedback);
+                            
+                            // Remove the message after 2 seconds
+                            setTimeout(() => {
+                                feedback.remove();
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy URL: ', err);
+                            alert('Failed to copy the link. Please try again.');
+                        });
+                    break;
+            }
+        });
+    });
 }
 
 // Initialize blog functionality when DOM is loaded
