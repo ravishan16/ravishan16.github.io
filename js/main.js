@@ -41,9 +41,12 @@ function initMobileMenu() {
     
     if (!menuButton || !mobileMenu) return;
 
-    menuButton.addEventListener('click', () => {
+    menuButton.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent event bubbling
         const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
         menuButton.setAttribute('aria-expanded', !isExpanded);
+        
+        // Toggle visible class for animation
         mobileMenu.classList.toggle('visible');
         
         // Update menu icon
@@ -61,14 +64,16 @@ function initMobileMenu() {
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
-            menuButton.setAttribute('aria-expanded', 'false');
-            mobileMenu.classList.remove('visible');
-            
-            // Reset menu icon
-            const menuIcon = menuButton.querySelector('[data-lucide]');
-            if (menuIcon) {
-                menuIcon.setAttribute('data-lucide', 'menu');
-                initializeIcons();
+            if (mobileMenu.classList.contains('visible')) {
+                menuButton.setAttribute('aria-expanded', 'false');
+                mobileMenu.classList.remove('visible');
+                
+                // Reset menu icon
+                const menuIcon = menuButton.querySelector('[data-lucide]');
+                if (menuIcon) {
+                    menuIcon.setAttribute('data-lucide', 'menu');
+                    initializeIcons();
+                }
             }
         }
     });

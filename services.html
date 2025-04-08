@@ -154,43 +154,37 @@
 <body class="antialiased">
     <a href="#main-content" class="skip-to-main-content">Skip to main content</a>
 
-    <nav class="bg-card-bg shadow-sm sticky top-0 z-50 border-b border-light">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-bold text-lg text-accent">Ravi S.</a>
-                </div>
+    <nav class="nav-container">
+        <div class="nav-wrapper">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">Ravi S.</a>
                 <!-- Desktop Navigation -->
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <a href="index.html" class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
-                    <a href="about.html" class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
-                    <a href="projects.html" class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Projects</a>
-                    <a href="services.html" class="border-accent text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold">Services</a>
-                    <a href="speaking.html" class="border-transparent text-secondary hover:border-gray-300 hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Speaking</a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-item">Home</a>
+                    <a href="about.html" class="nav-item">About</a>
+                    <a href="projects.html" class="nav-item">Projects</a>
+                    <a href="services.html" class="nav-item active">Services</a>
+                    <a href="speaking.html" class="nav-item">Speaking</a>
                 </div>
                 <!-- Mobile menu button -->
-                <div class="flex items-center sm:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-button>
-                        <span class="sr-only">Open main menu</span>
-                        <i data-lucide="menu" class="block h-6 w-6" aria-hidden="true"></i>
-                    </button>
-                </div>
+                <button type="button" class="nav-mobile-button" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-button>
+                    <span class="sr-only">Open main menu</span>
+                    <i data-lucide="menu" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
 
         <!-- Mobile menu -->
-        <div class="sm:hidden hidden" id="mobile-menu" data-mobile-menu>
-            <div class="pt-2 pb-3 space-y-1">
-                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Home</a>
-                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">About</a>
-                <a href="projects.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Projects</a>
-                <a href="services.html" class="bg-accent border-accent text-white block pl-3 pr-4 py-2 text-base font-medium" aria-current="page">Services</a>
-                <a href="speaking.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Speaking</a>
-            </div>
+        <div class="nav-mobile-menu" id="mobile-menu" data-mobile-menu>
+            <a href="index.html" class="nav-mobile-item">Home</a>
+            <a href="about.html" class="nav-mobile-item">About</a>
+            <a href="projects.html" class="nav-mobile-item">Projects</a>
+            <a href="services.html" class="nav-mobile-item active">Services</a>
+            <a href="speaking.html" class="nav-mobile-item">Speaking</a>
         </div>
     </nav>
 
-    <main id="main-content">
+    <main id="main-content" class="container py-6 sm:py-8 md:py-12">
         <div class="section-container">
             <div class="page-header">
                 <!-- <h1>Services</h1> -->
@@ -200,32 +194,62 @@
             <div class="services-grid">
                 <div class="service-card">
                     <h2><i data-lucide="bot" aria-hidden="true"></i>AI & Automation</h2>
-                    <p>Custom AI solutions, intelligent automation, and strategic AI consulting to transform your business operations.</p>
+                    <ul class="service-list">
+                        <li>Custom AI solutions and agent development</li>
+                        <li>Intelligent process automation</li>
+                        <li>Strategic AI implementation consulting</li>
+                        <li>Business process transformation</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
                     <h2><i data-lucide="cloud" aria-hidden="true"></i>Infrastructure Modernization</h2>
-                    <p>Modernize your infrastructure through cloud migration, infrastructure as code, and legacy systems refactoring.</p>
+                    <ul class="service-list">
+                        <li>Cloud migration strategies</li>
+                        <li>Infrastructure as Code (IaC) implementation</li>
+                        <li>Legacy systems refactoring</li>
+                        <li>Cost optimization and efficiency</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
                     <h2><i data-lucide="settings" aria-hidden="true"></i>DevOps & Platform Engineering</h2>
-                    <p>Accelerate your software delivery with CI/CD, DevSecOps integration, and advanced platform observability.</p>
+                    <ul class="service-list">
+                        <li>CI/CD pipeline development</li>
+                        <li>DevSecOps integration</li>
+                        <li>Advanced platform observability</li>
+                        <li>Deployment automation</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
                     <h2><i data-lucide="database" aria-hidden="true"></i>Data & Analytics Engineering</h2>
-                    <p>Implement robust data pipelines, analytics solutions, and data management practices to enhance business insights.</p>
+                    <ul class="service-list">
+                        <li>Robust data pipeline architecture</li>
+                        <li>Analytics solution implementation</li>
+                        <li>Data management best practices</li>
+                        <li>Business intelligence enhancement</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
                     <h2><i data-lucide="code" aria-hidden="true"></i>Application Engineering</h2>
-                    <p>End-to-end product engineering including full-stack development, API design, and system integrations.</p>
+                    <ul class="service-list">
+                        <li>End-to-end product engineering</li>
+                        <li>Full-stack application development</li>
+                        <li>API design and implementation</li>
+                        <li>System integration and connectivity</li>
+                    </ul>
                 </div>
 
                 <div class="service-card">
                     <h2><i data-lucide="mic" aria-hidden="true"></i>Mentorship, Speaking & Workshops</h2>
-                    <p>Personalized mentorship, engaging speaking engagements, and custom workshops on technology leadership and innovation.</p>
+                    <ul class="service-list">
+                        <li>Personalized technical mentorship</li>
+                        <li>Engaging speaking engagements</li>
+                        <li>Custom technology leadership workshops</li>
+                        <li>Innovation strategy sessions</li>
+                    </ul>
                 </div>
             </div>
         </div>

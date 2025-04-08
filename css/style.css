@@ -33,24 +33,54 @@ body {
 }
 
 /* Layout & Containers */
-.container {
+.container,
+.section-container,
+.nav-wrapper,
+.footer-wrapper {
   width: 100%;
   max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container,
+  .section-container,
+  .nav-wrapper,
+  .footer-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container,
+  .section-container,
+  .nav-wrapper,
+  .footer-wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
   .section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -138,9 +168,8 @@ a:hover {
 }
 
 .nav-wrapper {
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 0 1rem;
+  /* Container properties already defined in the common styles */
+  /* No need to redefine max-width, padding, and margin */
 }
 
 .nav-content {
@@ -203,17 +232,30 @@ a:hover {
 }
 
 .nav-mobile-menu {
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-card-bg);
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--color-border-light);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 40;
   padding: 0.5rem 0;
 }
 
 .nav-mobile-menu.visible {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .nav-mobile-item {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: var(--color-text-secondary);
   transition: var(--transition-base);
@@ -234,8 +276,14 @@ a:hover {
   background-color: var(--color-card-bg);
   border: 1px solid var(--color-border-light);
   border-radius: 0.5rem;
-  padding: 1.5rem;
+  padding: 1.25rem;
   transition: var(--transition-base);
+}
+
+@media (min-width: 640px) {
+  .content-card {
+    padding: 1.5rem;
+  }
 }
 
 .content-card:hover {
@@ -245,7 +293,7 @@ a:hover {
 
 /* Service Cards */
 .service-card {
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -253,6 +301,12 @@ a:hover {
   border-radius: 0.5rem;
   background-color: var(--color-card-bg);
   transition: var(--transition-base);
+}
+
+@media (min-width: 640px) {
+  .service-card {
+    padding: 2rem;
+  }
 }
 
 .service-card:hover {
@@ -276,18 +330,45 @@ a:hover {
   color: var(--color-accent-primary);
 }
 
-.service-card ul {
-  list-style-type: disc;
+/* Service List Styling */
+.service-list {
+  list-style-type: none;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.service-list li {
+  position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: var(--color-text-secondary);
 }
 
-.service-card li {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
-  padding-left: 0.5rem;
+.service-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-accent-primary);
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .service-list li {
+    font-size: 0.9rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .service-list li::before {
+    width: 0.4rem;
+    height: 0.4rem;
+    top: 0.45rem;
+  }
 }
 
 /* Icon Styles */
@@ -365,17 +446,37 @@ a:hover {
 .hero {
   background-color: var(--color-accent-primary);
   color: white;
-  padding: 4rem 0;
+  padding: 2.5rem 0;
   text-align: center;
 }
 
+@media (min-width: 640px) {
+  .hero {
+    padding: 3rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 0;
+  }
+}
+
 .hero-image {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 9999px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.25rem;
   object-fit: cover;
   box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 640px) {
+  .hero-image {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto 1.5rem;
+  }
 }
 
 /* Recommendations */
@@ -534,9 +635,8 @@ a:hover {
 }
 
 .footer-wrapper {
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 0 1rem;
+  /* Container properties already defined in the common styles */
+  /* No need to redefine max-width, padding, and margin */
 }
 
 .footer-social {
@@ -600,17 +700,34 @@ a:hover {
 
 /* Speaking Grid Layout */
 .speaking-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .speaking-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .speaking-card {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  height: 100%;
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.5rem;
+  background-color: var(--color-card-bg);
+  transition: var(--transition-base);
+}
+
+.speaking-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-primary);
 }
 
 .speaking-card-image {
