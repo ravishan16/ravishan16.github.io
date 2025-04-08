@@ -330,18 +330,45 @@ a:hover {
   color: var(--color-accent-primary);
 }
 
-.service-card ul {
-  list-style-type: disc;
+/* Service List Styling */
+.service-list {
+  list-style-type: none;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.service-list li {
+  position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: var(--color-text-secondary);
 }
 
-.service-card li {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
-  padding-left: 0.5rem;
+.service-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-accent-primary);
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .service-list li {
+    font-size: 0.9rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .service-list li::before {
+    width: 0.4rem;
+    height: 0.4rem;
+    top: 0.45rem;
+  }
 }
 
 /* Icon Styles */
@@ -673,10 +700,16 @@ a:hover {
 
 /* Speaking Grid Layout */
 .speaking-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .speaking-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .speaking-card {
@@ -684,13 +717,17 @@ a:hover {
   flex-direction: column;
   gap: 1.25rem;
   padding: 1.5rem;
+  height: 100%;
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.5rem;
+  background-color: var(--color-card-bg);
+  transition: var(--transition-base);
 }
 
-@media (min-width: 640px) {
-  .speaking-card {
-    padding: 2rem;
-    gap: 1.5rem;
-  }
+.speaking-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-primary);
 }
 
 .speaking-card-image {

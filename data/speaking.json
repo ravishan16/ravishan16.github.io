@@ -1,41 +1,57 @@
 [
-   {
+  {
+    "id": "fiu-python-genai-2023",
+    "title": "The Power of Python and Generative AI: Unlocking New Possibilities",
+    "event": "Florida International University - College of Business",
+    "eventUrl": null,
+    "date": "2023-04-22",
+    "location": "Miami, FL",
+    "role": "Guest Speaker & Workshop Lead",
+    "description": "Delivered a hands-on workshop for management students focused on practical applications of Python and Generative AI. Students engaged in coding exercises using Google Colab, explored GenAI concepts including LLMs, prompt engineering, and applied these tools to real-world problems like data analysis and storytelling. Feedback was overwhelmingly positive, and the session remained energetic and interactive from start to finish.",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "imageUrl": "images/ravishankar_sivasubramaniam_fiu.jpeg"
+  }  ,
+  {
     "id": "uncc-dsi-2019",
-    "title": "UNCC DSI - ATD Case Study",
+    "title": "How Advanced Analytics is Transforming ATD",
     "event": "University of North Carolina Charlotte, Data Science Initiative",
     "eventUrl": "https://dsi.uncc.edu/events/atd-case-study",
     "date": "2019-09-18",
     "location": "Charlotte, NC",
-    "role": "Guest Speaker",
-    "description": "Presented a case study related to American Tire Distributors.",
+    "role": "Guest Speaker (with ATD Advanced Analytics Team)",
+    "description": "Spoke to graduate students in data science about how the ATD Advanced Analytics team is optimizing core business functions through data. Covered real-world use cases including slotting, distribution center staffing, and route optimization—walking through how models are built, what tools/platforms are used (Python, BigQuery, Docker, GCP), and how those models are deployed to production. Shared behind-the-scenes details of 'how the sausage is made'—containerizing, automating, scaling in the cloud—and the real-world gotchas we faced bringing analytics to life in a high-velocity ops environment.",
     "slidesUrl": null,
     "videoUrl": null,
     "imageUrl": "images/ravishankar_sivasubramaniam_uncc_1.jpg"
-  },
-   {
+  }
+  ,
+  {
     "id": "ingersoll-summit-2019",
-    "title": "IngersollRand Analytics Summit",
-    "event": "IngersollRand Analytics Summit",
+    "title": "A View from the Trenches: Building a Sustainable Analytics Platform at ATD",
+    "event": "Ingersoll Rand Analytics Summit",
     "eventUrl": null,
     "date": "2019-04-23",
     "location": "Davidson, NC",
-    "role": "Speaker",
-    "description": "Presented 'A view from the trenches - How ATD is building a sustainable technology & development platform around advanced analytics'.",
+    "role": "Speaker (with ATD Advanced Analytics Team)",
+    "description": "Shared our journey at ATD on how we built a sustainable analytics and development platform. Covered technical practices like CI/CD, reproducible research, cloud-native architecture, and containerization. Walked through a real-world use case—the DC Staffing Tool—highlighting how we dealt with messy data, automated model pipelines, and delivered business value at scale. Included a live demo and emphasized practical takeaways for scaling data science in the enterprise.",
     "slidesUrl": null,
     "videoUrl": null,
-    "imageUrl": "images/ravishankar_sivasubramaniam_ingersoll_1.jpg"
+    "imageUrl": "images/ravishankar_sivasubramaniam_ingersoll_2.jpg"
   },
+
   {
     "id": "columbia-2018",
-    "title": "Guest Lecture @ Columbia University",
+    "title": "Technology 101 for Entrepreneurs: What to Watch for in 2018",
     "event": "Mailman School of Public Health, Columbia University",
     "eventUrl": null,
     "date": "2018-12-04",
     "location": "New York, NY",
     "role": "Guest Speaker",
-    "description": "Delivered a guest lecture.",
+    "description": "Spoke to students about navigating the evolving technology landscape and how to bootstrap tech-enabled products. Covered foundational tech stacks, serverless infrastructure, UX in the age of immediacy, team composition for startups, and practical recommendations. Emphasized simplicity, speed, and scalability for first-time builders. Delivered as a fast-paced, practical primer for public health and social impact entrepreneurs entering tech.",
     "slidesUrl": null,
     "videoUrl": null,
-    "imageUrl": "images/ravishankar_sivasubramaniam_columbia_1.jpg"
+    "imageUrl": "images/ravishankar_sivasubramaniam_columbia_2.jpg"
   }
+  
 ]
