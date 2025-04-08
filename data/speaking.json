@@ -1,0 +1,41 @@
+[
+   {
+    "id": "uncc-dsi-2019",
+    "title": "UNCC DSI - ATD Case Study",
+    "event": "University of North Carolina Charlotte, Data Science Initiative",
+    "eventUrl": "https://dsi.uncc.edu/events/atd-case-study",
+    "date": "2019-09-18",
+    "location": "Charlotte, NC",
+    "role": "Guest Speaker",
+    "description": "Presented a case study related to American Tire Distributors.",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "imageUrl": "images/ravishankar_sivasubramaniam_uncc_1.jpg"
+  },
+   {
+    "id": "ingersoll-summit-2019",
+    "title": "IngersollRand Analytics Summit",
+    "event": "IngersollRand Analytics Summit",
+    "eventUrl": null,
+    "date": "2019-04-23",
+    "location": "Davidson, NC",
+    "role": "Speaker",
+    "description": "Presented 'A view from the trenches - How ATD is building a sustainable technology & development platform around advanced analytics'.",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "imageUrl": "images/ravishankar_sivasubramaniam_ingersoll_1.jpg"
+  },
+  {
+    "id": "columbia-2018",
+    "title": "Guest Lecture @ Columbia University",
+    "event": "Mailman School of Public Health, Columbia University",
+    "eventUrl": null,
+    "date": "2018-12-04",
+    "location": "New York, NY",
+    "role": "Guest Speaker",
+    "description": "Delivered a guest lecture.",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "imageUrl": "images/ravishankar_sivasubramaniam_columbia_1.jpg"
+  }
+]

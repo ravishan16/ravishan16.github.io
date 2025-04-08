@@ -1,0 +1,6 @@
+# Ensure robots.txt aligns with sitemap
+User-agent: *
+Disallow: /
+
+Sitemap: https://ravishan16.github.io/sitemap.xml
+
