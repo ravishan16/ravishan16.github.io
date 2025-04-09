@@ -48,23 +48,9 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js" as="script" />
 
     <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/favicon-16x16.png"
-    />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/profile_favicon_32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/profile_avatar_circle.jpg">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119195186-1"></script>
@@ -348,13 +334,8 @@
           
         } catch (error) {
           console.error('Error loading blog post:', error);
-          document.getElementById('blog-content').innerHTML = `
-            <div class="error">
-              <h1 class="text-2xl font-bold mb-4">Error Loading Blog Post</h1>
-              <p class="mb-4">${error.message || 'There was an error loading this blog post. Please try again later.'}</p>
-              <a href="blog.html" class="cta-button">Back to Blog</a>
-            </div>
-          `;
+          // Redirect to 404 page instead of showing inline error
+          window.location.href = '/404.html';
         }
       });
       

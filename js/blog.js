@@ -204,9 +204,22 @@ function setupBlogCardSharing() {
     });
 }
 
+// Fix the page not found handler
+function handlePageNotFound() {
+  // Check if we're on a page that should exist
+  if (window.location.pathname.endsWith('.html') && 
+      document.querySelector('main') === null && 
+      window.location.pathname !== '/404.html') {
+    window.location.href = '/404.html';
+  }
+}
+
 // Initialize blog functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Only run on blog listing page
+    // Run 404 check on all pages
+    handlePageNotFound();
+    
+    // Only run blog functionality on blog listing page
     if (document.getElementById('blog-list')) {
         loadBlogPosts();
     }
