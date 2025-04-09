@@ -1,0 +1,52 @@
+[
+  {
+    "id": "automate-your-mac-setup",
+    "title": "Automate Your Mac Setup: A Developer's Guide",
+    "date": "2025-04-03",
+    "summary": "Learn how to automatically configure a new Mac for development in about an hour instead of doing it manually, with tools for installing software, configuring your shell, and setting up a consistent environment.",
+    "tags": ["macOS", "Automation", "dev", "Terminal", "Tools", "Productivity"],
+    "coverImage": "https://raw.githubusercontent.com/ravishan16/dotFile/main/assets/banner_1.png",
+    "markdown": "blog/automate-your-mac-setup.md",
+    "published": true
+  },
+  {
+    "id": "practical-guide-to-cloud-datacenter",
+    "title": "Beyond the Hype: A Practical Guide to Cloud and Datacenter Decisions",
+    "date": "2025-03-28",
+    "summary": "An in-depth analysis of cloud vs datacenter choices, focusing on key business considerations, trade-offs, and real-world examples to help organizations make informed infrastructure decisions.",
+    "tags": ["Cloud Computing", "Datacenter", "Infrastructure", "Technology Strategy", "Cost Optimization"],
+    "coverImage": "blog/images/cloude_datacenter.png",
+    "markdown": "blog/practical-guide-to-cloud-datacenter.md",
+    "published": true
+  },
+  {
+    "id": "how-to-toggle-dark-mode-macos-mojave-command-line",
+    "title": "How to toggle Dark Mode in MacOS Mojave from the command line",
+    "date": "2018-11-17",
+    "summary": "Learn how to quickly toggle between light and dark mode in macOS Mojave using terminal commands and AppleScript, with a simple bash alias to make switching modes easier.",
+    "tags": ["macOS", "Tips And Tricks", "Terminal", "AppleScript", "Productivity"],
+    "coverImage": "blog/images/Toggle_Dark_Mode_GUI.gif",
+    "markdown": "blog/how-to-toggle-dark-mode-in-macOS-Majove-command-line.md",
+    "published": true
+  },
+  {
+    "id": "infinite-shades-analog-dad",
+    "title": "Infinite Shades of being an Analog Father in a Digital World",
+    "date": "2019-06-16",
+    "summary": "Reflections on how fatherhood has enriched my life and career, challenging the notion that having kids can be detrimental to professional growth while sharing 18 key insights gained from raising my son.",
+    "tags": ["Parenting",  "Career", "Work-Life Balance"],
+    "coverImage": "blog/images/father-son.png",
+    "markdown": "blog/infinite-shades-analog-dad.md",
+    "published": true
+  },
+  {
+    "id": "flatfile-dbeaver-sql-productivity",
+    "title": "Flatfile + DBeaver + SQL = Productivity",
+    "date": "2020-05-20",
+    "summary": "Learn how to analyze flat files using SQL by leveraging DBeaver, a popular database developer tool, without importing data into a full database. This approach provides a productivity boost for data analysis on CSV and other delimited files.",
+    "tags": ["Data Analysis", "SQL", "Productivity", "Tools","dev"],
+    "coverImage": "https://github.com/ravishan16/flatfile_dbeaver/blob/master/assets/flatfile_dbeaver.png?raw=true",
+    "markdown": "blog/flatfile_dbeaver.md",
+    "published": true
+  }
+]

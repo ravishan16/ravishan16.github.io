@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="p:domain_verify" content="43169353670bdc182bb416c7c14319b2" />
+
+    <title>Blog - Ravishankar Sivasubramaniam</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Read blog posts by Ravishankar Sivasubramaniam on AI, cloud architecture, automation, Python, and data science."
+    />
+    <meta
+      name="keywords"
+      content="Ravishankar Sivasubramaniam, AI, Cloud Architecture, Automation, Blog, Python, Data Science"
+    />
+    <link rel="canonical" href="https://ravishankars.com/blog.html" />
+
+    <!-- OpenGraph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Blog - Ravishankar Sivasubramaniam"
+    />
+    <meta
+      property="og:description"
+      content="Read blog posts by Ravishankar Sivasubramaniam on AI, cloud architecture, automation, Python, and data science."
+    />
+    <meta
+      property="og:image"
+      content="https://ravishankars.com/images/profile_avatar_circle.jpg"
+    />
+    <meta property="og:image:width" content="128" />
+    <meta property="og:image:height" content="128" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content="https://ravishankars.com/blog.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@ravishankar_s" />
+    <meta
+      name="twitter:title"
+      content="Blog - Ravishankar Sivasubramaniam"
+    />
+    <meta
+      name="twitter:description"
+      content="Read blog posts by Ravishankar Sivasubramaniam on AI, cloud architecture, automation, Python, and data science."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ravishankars.com/images/profile_avatar_circle.jpg"
+    />
+
+    <!-- Performance Optimization -->
+    <link
+      rel="preload"
+      href="https://cdn.tailwindcss.com?v=3.4.1"
+      as="script"
+    />
+    <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
+    <link rel="preload" href="css/style.css" as="style" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119195186-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-119195186-1");
+    </script>
+
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="https://unpkg.com/lucide@latest" type="module"></script>
+    <script defer nomodule src="https://unpkg.com/lucide-static@latest/dist/lucide.legacy.js"></script>
+  </head>
+  <body class="antialiased">
+    <a class="skip-to-main-content" href="#main-content">
+      Skip to main content
+    </a>
+    <nav class="nav-container">
+      <div class="nav-wrapper">
+        <div class="nav-content">
+          <a href="index.html" class="nav-brand">Ravi S.</a>
+          <!-- Desktop Navigation -->
+          <div class="nav-menu">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About</a>
+            <a href="projects.html" class="nav-item">Projects</a>
+            <a href="services.html" class="nav-item">Services</a>
+            <a href="speaking.html" class="nav-item">Speaking</a>
+            <a href="blog.html" class="nav-item active">Blog</a>
+          </div>
+          <!-- Mobile menu button -->
+          <button
+            type="button"
+            class="nav-mobile-button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            data-mobile-menu-button
+          >
+            <span class="sr-only">Open main menu</span>
+            <i data-lucide="menu" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="nav-mobile-menu" id="mobile-menu" data-mobile-menu>
+        <a href="index.html" class="nav-mobile-item">Home</a>
+        <a href="about.html" class="nav-mobile-item">About</a>
+        <a href="projects.html" class="nav-mobile-item">Projects</a>
+        <a href="services.html" class="nav-mobile-item">Services</a>
+        <a href="speaking.html" class="nav-mobile-item">Speaking</a>
+        <a href="blog.html" class="nav-mobile-item active">Blog</a>
+      </div>
+    </nav>
+
+    <main id="main-content" class="container py-6 sm:py-8 md:py-12">
+      <div class="page-header">
+        <h1 class="text-3xl font-bold text-center mb-4 text-primary">Blog</h1>
+        <p class="text-center text-secondary">
+          Thoughts on technology, AI, data science, and more
+        </p>
+      </div>
+      
+      <div class="tag-filter">
+        <span>Filter by topic:</span>
+        <div id="tag-buttons">
+          <!-- Tags will be dynamically added here -->
+          <div class="loading">Loading tags...</div>
+        </div>
+      </div>
+
+      <div id="blog-list" class="blog-grid">
+        <!-- Blog posts will be dynamically loaded here -->
+        <div class="loading">Loading posts...</div>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+          <a
+            href="mailto:contact@ravishankars.com"
+            class="social-icon"
+            title="Email"
+            ><i data-lucide="mail"></i
+          ></a>
+          <a
+            href="https://github.com/ravishan16/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="GitHub"
+            ><i data-lucide="github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ravishan16/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="LinkedIn"
+            ><i data-lucide="linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/ravishankar_s"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="Twitter"
+            ><i data-lucide="twitter"></i
+          ></a>
+        </div>
+        <p class="text-sm">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Ravishankar Sivasubramaniam. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/blog.js"></script>
+  </body>
+</html>

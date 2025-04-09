@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="p:domain_verify" content="43169353670bdc182bb416c7c14319b2" />
+
+    <title>Blog Post - Ravishankar Sivasubramaniam</title>
+
+    <!-- SEO Meta Tags - Will be updated dynamically -->
+    <meta
+      name="description"
+      content="Blog post by Ravishankar Sivasubramaniam."
+    />
+    <meta
+      name="keywords"
+      content="Ravishankar Sivasubramaniam, AI, Cloud Architecture, Automation, Blog"
+    />
+
+    <!-- OpenGraph Meta Tags - Will be updated dynamically -->
+    <meta
+      property="og:title"
+      content="Blog Post - Ravishankar Sivasubramaniam"
+    />
+    <meta
+      property="og:description"
+      content="Blog post by Ravishankar Sivasubramaniam."
+    />
+    <meta
+      property="og:image"
+      content="https://ravishankars.com/images/profile_avatar_circle.jpg"
+    />
+    <meta property="og:url" content="https://ravishankars.com/blog-post.html" />
+    <meta property="og:type" content="article" />
+    
+    <!-- Performance Optimization -->
+    <link
+      rel="preload"
+      href="https://cdn.tailwindcss.com?v=3.4.1"
+      as="script"
+    />
+    <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
+    <link rel="preload" href="css/style.css" as="style" />
+    
+    <!-- Syntax highlighting -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css" as="style" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js" as="script" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js" as="script" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119195186-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-119195186-1");
+    </script>
+
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script defer src="https://unpkg.com/lucide@latest" type="module"></script>
+    <script defer nomodule src="https://unpkg.com/lucide-static@latest/dist/lucide.legacy.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+  </head>
+  <body class="antialiased">
+    <a class="skip-to-main-content" href="#main-content">
+      Skip to main content
+    </a>
+    <nav class="nav-container">
+      <div class="nav-wrapper">
+        <div class="nav-content">
+          <a href="index.html" class="nav-brand">Ravi S.</a>
+          <!-- Desktop Navigation -->
+          <div class="nav-menu">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About</a>
+            <a href="projects.html" class="nav-item">Projects</a>
+            <a href="services.html" class="nav-item">Services</a>
+            <a href="speaking.html" class="nav-item">Speaking</a>
+            <a href="blog.html" class="nav-item active">Blog</a>
+          </div>
+          <!-- Mobile menu button -->
+          <button
+            type="button"
+            class="nav-mobile-button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            data-mobile-menu-button
+          >
+            <span class="sr-only">Open main menu</span>
+            <i data-lucide="menu" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="nav-mobile-menu" id="mobile-menu" data-mobile-menu>
+        <a href="index.html" class="nav-mobile-item">Home</a>
+        <a href="about.html" class="nav-mobile-item">About</a>
+        <a href="projects.html" class="nav-mobile-item">Projects</a>
+        <a href="services.html" class="nav-mobile-item">Services</a>
+        <a href="speaking.html" class="nav-mobile-item">Speaking</a>
+        <a href="blog.html" class="nav-mobile-item active">Blog</a>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <div class="blog-post-container">
+        <!-- Move share buttons container to the top -->
+        <div id="share-container" class="share-container">
+          <div class="share-title">Share this post:</div>
+          <div class="share-buttons">
+            <button id="share-twitter" class="share-button" aria-label="Share on Twitter">
+              <i data-lucide="twitter"></i>
+            </button>
+            <button id="share-facebook" class="share-button" aria-label="Share on Facebook">
+              <i data-lucide="facebook"></i>
+            </button>
+            <button id="share-linkedin" class="share-button" aria-label="Share on LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </button>
+            <button id="share-copy" class="share-button" aria-label="Copy link">
+              <i data-lucide="link"></i>
+            </button>
+          </div>
+          <div id="copy-feedback" class="copy-feedback">Link copied to clipboard!</div>
+        </div>
+        
+        <article id="blog-content" class="blog-post">
+          <!-- Blog post will be dynamically loaded here -->
+          <div class="loading">Loading post...</div>
+        </article>
+        
+        <div class="blog-nav">
+          <a href="blog.html" class="back-to-blog">
+            <i data-lucide="arrow-left" class="h-4 w-4"></i>
+            Back to All Posts
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+          <a
+            href="mailto:contact@ravishankars.com"
+            class="social-icon"
+            title="Email"
+            ><i data-lucide="mail"></i
+          ></a>
+          <a
+            href="https://github.com/ravishan16/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="GitHub"
+            ><i data-lucide="github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ravishan16/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="LinkedIn"
+            ><i data-lucide="linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/ravishankar_s"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            title="Twitter"
+            ><i data-lucide="twitter"></i
+          ></a>
+        </div>
+        <p class="text-sm">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Ravishankar Sivasubramaniam. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/blog.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          // Get the blog ID from the URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const blogId = urlParams.get('id');
+          
+          if (!blogId) {
+            throw new Error('Blog post ID not specified');
+          }
+          
+          // Fetch blog data
+          const response = await fetch('data/blog.json');
+          if (!response.ok) {
+            throw new Error(`Failed to fetch blog data: ${response.statusText}`);
+          }
+          const blogs = await response.json();
+          
+          // Find the specific blog post
+          const blog = blogs.find(b => b.id === blogId);
+          
+          if (!blog) {
+            throw new Error('Blog post not found');
+          }
+          
+          // Set the page title and meta tags
+          document.title = `${blog.title} - Ravishankar Sivasubramaniam`;
+          document.querySelector('meta[name="description"]').content = blog.summary;
+          document.querySelector('meta[name="keywords"]').content = 
+            `Ravishankar Sivasubramaniam, ${blog.tags ? blog.tags.join(', ') : 'Blog'}`;
+          document.querySelector('meta[property="og:title"]').content = blog.title;
+          document.querySelector('meta[property="og:description"]').content = blog.summary;
+          
+          // Update image if available
+          if (blog.coverImage || blog.imageUrl) {
+            document.querySelector('meta[property="og:image"]').content = 
+              `https://ravishankars.com/${blog.coverImage || blog.imageUrl}`;
+          }
+          
+          const blogContent = document.getElementById('blog-content');
+          
+          // Create header section
+          let headerHTML = `
+              <header class="blog-header">
+                  <h1 class="text-3xl font-bold mb-4 text-primary">${blog.title}</h1>
+                  <div class="blog-meta">
+                      <span class="blog-date">${formatDate(blog.date)}</span>
+                      <div class="blog-tags mt-2">
+                          ${blog.tags ? blog.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+                      </div>
+                  </div>
+              </header>
+          `;
+          
+          let markdownContent;
+          
+          if (blog.markdown) {
+            // Fetch the markdown file
+            try {
+              const markdownResponse = await fetch(blog.markdown);
+              if (!markdownResponse.ok) {
+                throw new Error(`Failed to load markdown file: ${markdownResponse.statusText}`);
+              }
+              markdownContent = await markdownResponse.text();
+            } catch (error) {
+              console.error("Error fetching markdown:", error);
+              throw new Error(`Could not load the blog content: ${error.message}`);
+            }
+          } else if (blog.content) {
+            // Use inline content from the JSON
+            markdownContent = blog.content;
+          } else {
+            throw new Error('No content found for this blog post');
+          }
+          
+          // Initialize markdown-it with options
+          const md = window.markdownit({
+            html: true,
+            linkify: true,
+            typographer: true,
+            highlight: function (str, lang) {
+              if (lang && hljs.getLanguage(lang)) {
+                try {
+                  return hljs.highlight(str, { language: lang }).value;
+                } catch (__) {}
+              }
+              return ''; // use external default escaping
+            }
+          });
+          
+          // Convert markdown to HTML
+          const contentHTML = md.render(markdownContent);
+          
+          // Combine header and content
+          blogContent.innerHTML = headerHTML + `<div class="blog-body">${contentHTML}</div>`;
+          
+          // Fix image paths if needed
+          document.querySelectorAll('.blog-body img').forEach(img => {
+            const src = img.getAttribute('src');
+            if (src && !src.startsWith('/') && !src.startsWith('http')) {
+              // Don't add a leading slash - keep the path relative
+              // Check if the markdown path needs to be considered
+              if (blog.markdown && blog.markdown.includes('/')) {
+                // If markdown is in a subdirectory, images might be relative to that
+                const markdownDir = blog.markdown.substring(0, blog.markdown.lastIndexOf('/') + 1);
+                img.src = markdownDir + src;
+              }
+              // Otherwise keep the path as is
+            }
+          });
+          
+          // Fix video source paths
+          document.querySelectorAll('.blog-body video source').forEach(source => {
+            const src = source.getAttribute('src');
+            if (src && !src.startsWith('/') && !src.startsWith('http')) {
+              // Apply the same logic as for images
+              if (blog.markdown && blog.markdown.includes('/')) {
+                const markdownDir = blog.markdown.substring(0, blog.markdown.lastIndexOf('/') + 1);
+                source.src = markdownDir + src;
+              }
+            }
+          });
+          
+          // Apply syntax highlighting to code blocks
+          document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightElement(block);
+          });
+          
+          // Set up share buttons functionality
+          setupShareButtons(blog.title);
+          
+          // Initialize icons
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+          
+        } catch (error) {
+          console.error('Error loading blog post:', error);
+          document.getElementById('blog-content').innerHTML = `
+            <div class="error">
+              <h1 class="text-2xl font-bold mb-4">Error Loading Blog Post</h1>
+              <p class="mb-4">${error.message || 'There was an error loading this blog post. Please try again later.'}</p>
+              <a href="blog.html" class="cta-button">Back to Blog</a>
+            </div>
+          `;
+        }
+      });
+      
+      function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('en-US', options);
+      }
+      
+      // Set up share buttons functionality
+      function setupShareButtons(title) {
+        const pageUrl = window.location.href;
+        const shareText = `Check out "${title}" by Ravishankar Sivasubramaniam`;
+        
+        // Twitter/X share
+        document.getElementById('share-twitter').addEventListener('click', () => {
+          const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(shareText)}`;
+          window.open(twitterUrl, '_blank', 'noopener,noreferrer');
+        });
+        
+        // Facebook share
+        document.getElementById('share-facebook').addEventListener('click', () => {
+          const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+          window.open(facebookUrl, '_blank', 'noopener,noreferrer');
+        });
+        
+        // LinkedIn share
+        document.getElementById('share-linkedin').addEventListener('click', () => {
+          const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+          window.open(linkedinUrl, '_blank', 'noopener,noreferrer');
+        });
+        
+        // Copy link button
+        document.getElementById('share-copy').addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(pageUrl);
+            const feedback = document.getElementById('copy-feedback');
+            feedback.classList.add('visible');
+            
+            // Hide the feedback message after 2 seconds
+            setTimeout(() => {
+              feedback.classList.remove('visible');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy URL: ', err);
+            alert('Failed to copy the link. Please try again.');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
