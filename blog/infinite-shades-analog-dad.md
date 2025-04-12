@@ -1,6 +1,6 @@
 # Infinite Shades of being an Analog Father in a Digital World
 
-![Father and Son](images/father-son.png)
+![Father and Son](images/father-son-compressed.jpg)
 When a child is born, a father is born. I do code for a living, but by far my most excellent “profession” involves raising my curious 7-year-old boy. My son makes me a better person every day. I consider myself a novice, shy writer; and yet, I was recently inspired to share my views on fatherhood and career after reading an article that claimed that kids can be detrimental to your professional life. I totally disagree with this point of view. This article encouraged me to do some self-reflection on how I have managed my life and career for the last 7 years. I understand that not everyone shares the same experience of parenthood and career. However, from my perspective, I have become a better person by sharing my life with my son, and it has tremendously helped me professionally. Here are some insights
 
 ```

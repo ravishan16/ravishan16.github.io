@@ -1,6 +1,6 @@
 ## Beyond the Hype: A Practical Guide to Cloud and Datacenter Decisions
 
-![Banner](images/cloude_datacenter.png)
+![Banner](images/cloude_datacenter-compressed.jpg)
 
 The technology infrastructure landscape is perpetually in flux. Recent attention on companies like CoreWeave[($CRWV)](https://www.nasdaq.com/market-activity/ipos/financial-filings?dealId=1079716-113203), particularly following their recent IPO and focus on bare-metal GPU rentals for AI/ML workloads, has brought the long-standing datacenter versus cloud computing debate back into focus. While **hyperscalers** – massive-scale cloud providers like AWS and Azure known for their vast global infrastructure and comprehensive service suites – offer predominantly virtualization-based services (alongside bare-metal options), the demand for raw compute power highlights diverse infrastructure needs. This necessitates a clear-eyed look at the fundamental trade-offs involved, moving beyond marketing hype to examine the practical implications for different business requirements.
 

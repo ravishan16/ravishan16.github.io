@@ -48,5 +48,15 @@
     "coverImage": "https://github.com/ravishan16/flatfile_dbeaver/blob/master/assets/flatfile_dbeaver.png?raw=true",
     "markdown": "blog/flatfile_dbeaver.md",
     "published": true
+  },
+  {
+    "id": "inbox-zero-workflow",
+    "title": "Ravi's Inbox Zero Workflow: Filters, Labels, and Shortcuts That Actually Work",
+    "date": "2016-05-17",
+    "summary": "A practical approach to managing your email inbox using Gmail's built-in features—filters, labels, and keyboard shortcuts.",
+    "tags": ["gmail", "Cheatsheet", "Tips & Tricks", "Productivity", "Automation"],
+    "coverImage": "blog/images/ravi-inbox-zero-workflow-compressed.jpg",
+    "published": true,
+    "markdown": "blog/inbox-zero-workflow.md"
   }
 ]
