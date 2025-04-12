@@ -23,8 +23,10 @@ Here it is for everyone—I hope this helps.
 
 ## Prerequisite
 
-> **Turn on keyboard shortcuts:**  
-> Go to **Settings → General → Keyboard shortcuts → On**, then click **Save Changes**.
+> **Gmail Settings Tip:**  
+> To use keyboard shortcuts, you need to enable them in Gmail settings first.  
+> Go to **Gmail → Settings (⚙) → See all settings → General tab → Keyboard shortcuts → Turn ON**,  
+> then scroll down and click **Save Changes**.
 
 ## Foundation: Filters and Labels
 
