@@ -21,6 +21,11 @@ Here it is for everyone—I hope this helps.
 
 ---
 
+## Prerequisite
+
+> **Turn on keyboard shortcuts:**  
+> Go to **Settings → General → Keyboard shortcuts → On**, then click **Save Changes**.
+
 ## Foundation: Filters and Labels
 
 **Labels** are like folders, but more flexible. You can:
